@@ -33,54 +33,75 @@ This skill powers the end-to-end transformation of YouTube video scripts into br
 
 ---
 
-## 3. The "Zero Assumption" Stop-Gate Protocol
+## 3. The 4 Fundamental User-Experience Commandments
 
-### 🚨 ABSOLUTE MANDATE: NEVER ASSUME & NEVER WRITE CODE ON THE FIRST TURN
-Whenever `/broll` is triggered or the user asks for B-roll graphics:
-1. **DO NOT start coding.**
-2. **DO NOT assume** visual directions, colors, fonts, or specs.
-3. **DO NOT ask open-ended questions** that require the user to type long essays.
-4. **YOU MUST CALL THE `ask_question` TOOL** to present clean, interactive pop-up modals where the user simply clicks and chooses!
+1. **Sequential Questioning (One Step at a Time)**:
+   - **NEVER dump a wall of 4 or 5 questions in a single turn.**
+   - Guide the user step-by-step: first determine the objective, then ask for the script section, then establish media/visual direction, and finally ideate concepts.
+2. **Always Provide "I Trust You / Make the Best Creative Decision"**:
+   - For every question regarding styling, typography, colors, or spec choice, ALWAYS include an option:
+     `"(Recommended) I trust you — Make the best creative decision based on the script"`.
+   - Never block a user who simply wants expert execution without having to pick font names or color hexes.
+3. **Media Agility (Don't Force Pure Vector Motion)**:
+   - Always offer media sourcing options:
+     - Pure Motion Graphics (vector typography, dynamic geometric staging, Foley sound design)
+     - Mixed Media (motion graphics + authentic images/video cuts)
+     - Local Drive Assets (OEM 4K videos, product cutouts in `public/product_images/`, local folders)
+     - Stock Footage Sourcing (Pexels, Pixabay, Mixkit)
+     - Web Evidence Receipts (Reddit threads, lab graphs, customer forum screenshots)
+4. **In-App Visual Spec Showcase**:
+   - Users cannot visualize abstract spec numbers in their head.
+   - Present the in-app interactive visual showcase (`spec_showcase.html`) so the user can see, watch, and understand what the specs look like before choosing.
 
 ---
 
 ## 4. The Interactive Onboarding Workflow (`ask_question` Tree)
 
-When `/broll` is invoked or a new B-roll task begins, execute this structured inquiry:
+When `/broll` is invoked or a new B-roll task begins, execute this structured inquiry **one question at a time**:
 
-### Step 1: Clarify Intent & Scope
-Use `ask_question` with these options:
-- `(Recommended) Create a high-retention B-roll for a specific script paragraph/sentence`
-- `Scout an entire script to map out B-roll candidates and timing`
-- `Explore and preview the 8 Spec Archetypes before deciding`
-- `Configure project design system (colors, fonts, output path)`
+### Turn 1: Determine the Objective
+Call `ask_question` with a single, clear question:
+- **Question**: *"Welcome to the B-Roll Motion Graphics Engine! What would you like to focus on?"*
+- **Options**:
+  - `(Recommended) Create a high-retention B-roll for a specific script paragraph or spoken cue`
+  - `Scout an entire script to map out B-roll candidate opportunities and timing`
+  - `Explore and preview the 8 Spec Archetypes before deciding on a direction`
+  - `Configure project design system (color palette, typography, deliverable path)`
 
-### Step 2: Establish Visual Mood & Backdrop
-Use `ask_question` to determine the environment:
-- `(Recommended) Vox / Keynote Paper White (#F8FAFC) — Clean editorial, high contrast, documentary focus`
-- `Dark Slate Blueprint (#0B111E) — Technical slate, micro-dot matrix, telemetry & data meters`
-- `Deep Minimal Obsidian (#05070B) — Hardware pedestal, dramatic warm amber radial glow`
+---
 
-### Step 3: Select Typography Pairing
-Use `ask_question` to select font styling:
-- `(Recommended) Editorial Tech: Space Grotesk (Headings) + IBM Plex Mono (Data/Labels)`
-- `Modern Broadcast: Inter / SF Pro (Clean, universal, documentary sans)`
-- `Kinetic Punch: High-contrast heavy sans (Optimized for lone words and giant numbers)`
+### Turn 2: Receive Script Section & Media Source
+Once the user selects their objective:
+- Ask for the 1–3 sentence script paragraph they want to animate.
+- Ask about **Media & Visual Agility**:
+  - `(Recommended) I trust you — Pick the best visual combination for this script section`
+  - `Mixed Media: Motion typography blended with authentic product photos & receipts`
+  - `Pure Motion Graphics: Vector typography, telemetry gauges, and studio backdrops`
+  - `OEM & Local Footage: Use official videos and hardware cutouts from local folders`
+  - `Documented Proof: Focus on Reddit cards, forum complaints, and lab test graphs`
 
-### Step 4: Choose the Spec Guidance Archetype
-Present the 8 Archetypes, reminding the user that the spec is a **creative addon/guide**:
-- `Spec 1: ProductSpec — Hardware hero, internal specs, callout pills, modular assembly`
-- `Spec 2: RatingScore — Broadcaster scoreboard, weighted multipliers, benchmark badges`
-- `Spec 3: Comparison — Conceptual split-screen, versus showdown, OTA vs Recall`
-- `Spec 4: MetricTelemetry — Live decibel VU needle, temperature gauges, price waveforms`
-- `Spec 5: QuoteReceipt — Forum post cards (Reddit/forums), sweeping felt-tip highlighter`
-- `Spec 6: StatementSpec — Provocative thesis hooks, lone words, giant stat punches (£1,000+)`
-- `Spec 7: SequentialEmphasis — Comma-separated list items, sequential subject entrances`
-- `Spec 8: ForensicAudit — Dense multi-pillar audit rows, mechanical clicks, verdict stamp`
-- `Custom / Multi-Spec Blend — Fluid combination across multiple archetypes`
+---
 
-### Step 5: The 3-Concept Ideation Step (No Code Yet!)
-Once preferences are established, analyze the script excerpt and present **2 to 3 distinct creative concepts**:
+### Turn 3: Visual Spec Guidance & In-App Showcase
+Before asking the user to pick a spec, provide a link to the interactive visual showcase artifact:
+`[Open In-App Visual Spec Showcase](file:///.../spec_showcase.html)`
+Then call `ask_question`:
+- **Question**: *"Which Spec Archetype should serve as your starting guidance addon?"*
+- **Options**:
+  - `(Recommended) I trust you — Let the narrative dictate the blend of specs`
+  - `Spec 1: ProductSpec — Hardware hero, internal specs, exploded CAD, leader lines`
+  - `Spec 2: RatingScore — Broadcaster scoreboard, weighted multipliers, review badges`
+  - `Spec 3: Comparison — Conceptual split-screen versus, trade-offs, OTA vs Recall`
+  - `Spec 4: MetricTelemetry — Live animated decibel VU meter, thermal gauges, dynamic waveforms`
+  - `Spec 5: QuoteReceipt — Dark-mode forum post card (Reddit/forums) with felt-tip highlighter`
+  - `Spec 6: StatementSpec — Provocative thesis hooks, lone words, massive stat punches (£1,000+)`
+  - `Spec 7: SequentialEmphasis — Comma-separated symptom lists, progressive multi-beat locks`
+  - `Spec 8: ForensicAudit — Dense multi-pillar criteria rows, mechanical clicks, verdict stamp`
+
+---
+
+### Turn 4: The 3-Concept Ideation Step (No Code Yet!)
+Analyze the script excerpt and present **2 to 3 distinct creative concepts**:
 - **Concept 1**: Minimalist Editorial / Kinetic Typography focus
 - **Concept 2**: Physical Hardware & Spatial Displacement focus
 - **Concept 3**: Authentic Evidence / Document Reality / Mixed Media focus
@@ -174,7 +195,6 @@ cmd /c npx remotion render <CompositionID> motion_clips/<canonical_name>.mp4
 
 ## 9. Reference Documentation Index
 
-For deeper technical patterns, consult the offline reference guides:
 - [The 8 Canonical Specs Catalog](./references/spec-catalog.md)
 - [Acoustic Foley Soundboard & Audio Timing](./references/foley-soundboard.md)
 - [Anti-AI Slop & Visual Design Commandments](./references/anti-ai-slop.md)
