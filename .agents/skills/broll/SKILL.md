@@ -56,7 +56,7 @@ This skill powers the end-to-end transformation of YouTube video scripts into br
      - Web Evidence Receipts (Reddit cards, lab graphs, forum posts)
 4. **In-App Visual Spec Showcase**:
    - Creators cannot visualize abstract spec numbers in their heads.
-   - Present the in-app interactive visual showcase artifact (`spec_showcase.html`) so the user can see, watch, and understand what each spec looks like before choosing.
+   - Present the in-app video showcase reference (`spec_video_showcase.md`) so the user can see, watch, and understand what each spec looks like before choosing.
 
 ---
 
@@ -90,17 +90,26 @@ Once the script line is provided, call `ask_question` with `is_multi_select: tru
 - **Question**: *"Where should we source the visuals and assets for this B-roll?"*
 - **Options**:
   - `(Recommended) Multi-source blend: Combine the best available assets automatically`
+  - `Official Web Hardware & Press Assets: Scrape high-res product photos, transparent cutouts & launch event photography from the web`
   - `Local Drive Assets: Use official videos and hardware cutouts from local project folders`
   - `Web Evidence Receipts: Search and pull authentic forum post receipts & lab test charts`
   - `Stock Video Sourcing: Find high-quality relevant stock footage (Pexels, Mixkit)`
   - `Pure Motion Graphics: Vector typography, telemetry meters, and studio backdrops`
   - `I trust you — Make the best creative decision based on the script`
 
+#### 🔍 Behind-the-Scenes Asset Sourcing Protocol:
+When the user selects an asset source or trusts the engine, **the agent must NEVER rely solely on low-res video freeze-frames when primary web assets exist**:
+1. **Product Hardware & Cutouts**: Automatically crawl/scrape manufacturer product pages (e.g. `bluettipower.eu`, `ecoflow.com`), brand press portals, certified EU retailers (e.g. Decathlon, Offgridtec), and clean energy trade publications (`ess-news.com`, `pv-magazine.com`). Download high-res product photos, isolated transparent PNGs, and exploded internal CAD schematics directly into `public/product_images/<brand>/web_assets/` or `official_web/`.
+2. **Editorial News & Event Photography**: Search press release wire services (PR Newswire, BusinessWire) and editorial photo archives for verified launch event photography (e.g. Eiffel Tower 1st-floor launch event photos).
+3. **Community Evidence & Receipts**: Query authentic community forums (Reddit `r/SolarDIY`, German `Photovoltaikforum`, official manufacturer support threads) and independent lab test reports.
+4. **Stock Context Footage**: Search Pexels, Pixabay, or Mixkit for contextually relevant live-action footage (must strictly match the script topic—zero generic filler).
+5. **Artisan Studio Textures**: Use high-resolution craft paper textures (`public/textures/`) or generate bespoke tactile backdrops using the Gemini Image model.
+
 ---
 
 ### Step 4: Visual Spec Guidance & In-App Video Showcase (Multi-Select Enabled)
-Before asking the user to pick specs, provide a clickable link to the native video showcase artifact:
-`[Open Studio Spec Video Showcase](file:///.../spec_video_showcase.md)`
+Before asking the user to pick specs, provide a clickable link to the permanent video showcase:
+👉 **[Open Studio Spec Video Showcase](file:///C:/Users/user/.gemini/config/skills/broll/references/spec_video_showcase.md)**
 Then call `ask_question` with `is_multi_select: true` so the user can select one or multiple archetypes to blend:
 - **Question**: *"Which Spec Archetype(s) would you like to draw from as guidance addons?"*
 - **Options**:
@@ -113,6 +122,7 @@ Then call `ask_question` with `is_multi_select: true` so the user can select one
   - `Spec 6: StatementSpec — Provocative thesis hooks, lone words, massive stat punches (£1,000+)`
   - `Spec 7: SequentialEmphasis — Comma-separated symptom lists, progressive multi-beat locks`
   - `Spec 8: ForensicAudit — Dense multi-pillar criteria rows, mechanical clicks, verdict stamp`
+*(Note: If the script section demands an archival investigative documentary aesthetic, select the dedicated Vox-Style track instead).*
 
 ---
 
@@ -121,14 +131,84 @@ Before writing any code, the agent MUST analyze the user's provided script text 
 1. **Narration Timing Math**: Word count ÷ ~2.25 words/sec = estimated seconds and frames @ 30fps.
 2. **Core Emotional Stakes & Conflict**: What is the narrator proving, challenging, revealing, or debunking?
 3. **Synthesize 3 Distinct Creative Concepts** specifically tailored to those exact spoken words:
-   - **Concept A (Minimalist Editorial / Kinetic Rhythm)**: Focus on high-contrast typography, lone words, and progressive multi-scene reveals on clean studio paper.
-   - **Concept B (Tactile / Analytical / Physical Evidence)**: Focus on hardware cutouts, animated telemetry meters, data graphs, or spatial displacement.
-   - **Concept C (Authentic Mixed Media / Cinematic Hold)**: Focus on real footage, documented receipts, or cinematic video holds with subtle Ken Burns push and corner editorial tags.
+   - **Concept A (Keynote / Swiss Minimalist)**: Focus on high-contrast typography, lone words, clean whitespace, subtle radiant accent lines, and authoritative hardware cutouts.
+   - **Concept B (Technical Telemetry & Evidence)**: Focus on animated decibel/thermal gauges, exploded CAD dimensions, scoreboard multipliers, and verified forum receipts.
+   - **Concept C (Kinetic Narrative Staged Reveal)**: Dynamic push-pull multi-scene choreography, sequential symptom locks, lone action words, and hero subject persistence across scene boundaries.
+   *(Special Case: If the creator explicitly requested the Vox documentary aesthetic, the 3 concepts instead draw from the 3 locked Vox house styles: Newsroom Collage, Mixed-Media Paper, or 3D Paper Diorama via `vox-style`).*
 4. **Interactive Modal Call**: Present the 3 concepts dynamically via `ask_question` with a 1-sentence breakdown of each concept's visual progression so the user can click their favorite.
 
 ---
 
-## 5. Canonical Deliverable Naming & Output Law
+## 5. The 4 Visual Production Tracks (Mixability vs. Isolation Laws)
+
+Our B-Roll engine encompasses **4 specialized production tracks**, governed by a strict rule of **Mixability vs. Isolation**:
+
+```
+                              ┌──────────────────────────────────────────────┐
+                              │           B-Roll Script Scouting             │
+                              │       (Paragraph / Spoken Thesis)            │
+                              └──────────────────────┬───────────────────────┘
+                                                     │
+                                        Choose Production Track
+                                                     │
+         ┌───────────────────────────┬───────────────┴───────────────┬───────────────────────────┐
+         ▼                           ▼                               ▼                           ▼
+   ┌───────────┐               ┌───────────┐                   ┌───────────┐               ┌───────────┐
+   │  Track 1  │               │  Track 2  │                   │  Track 3  │               │  Track 4  │
+   │  Modern   │               │ Vox-Style │                   │ OEM Video │               │  YouTube  │
+   │  Motion   │               │ Explainer │                   │ Real-World│               │  Shorts   │
+   │  Design   │               │  System   │                   │ Ingestion │               │  Engine   │
+   └─────┬─────┘               └─────┬─────┘                   └─────┬─────┘               └─────┬─────┘
+         │                           │                               │                           │
+  • Specs 1–8                 • 3 House Styles                • Plug-in Renewables         • 9:16 Vertical
+  • Swiss-editorial           • Archival newsprint            • Subtitle crop 120%         • 1080x1920
+  • Telemetry & gauges        • Halftone B&W cutouts          • Collision avoidance        • Andrew Edge TTS
+  • HIGHLY MIXABLE            • STRICTLY ISOLATED             • Rapid punch-in             • Viral hooks
+```
+
+### Track 1: Modern Motion Design & Modular Specs (Specs 1–8) [HIGHLY MIXABLE]
+- **Core Domain**: The foundational visual engine of `broll`. Clean Keynote studio, Swiss-editorial typography, dark slate (`#080B10`) or crisp studio paper backdrops, sleek telemetry meters, forum receipts, and modular scoreboards.
+- **Mixability Rule**: **100% Modular & Mixable**. You can fluidly transition between specs within a single scene: e.g., open on Spec 6 (lone word punch) -> glide into Spec 1 (hardware CAD cutout) -> receive Spec 4 (live telemetry meter) using **Hero Subject Persistence** and **Spatial Staging**.
+- **Execution**: Built deterministically in Remotion and rendered directly to `motion_clips/`.
+
+### Track 2: The Vox-Style Explainer System (`vox-style`) [STRICTLY ISOLATED]
+- **Core Domain**: Dedicated archival investigative documentary aesthetic (Vox, Johnny Harris, European investigative journalism).
+- **Skill Engine**: Handled by [`vox-style`](C:\Users\user\.gemini\config\skills\vox-style\SKILL.md).
+- **Isolation Rule**: **STRICTLY ISOLATED**. Vox has its own locked visual world (aged newsprint `#F5F2EB`, halftone dot screens, rough white keylines, ink stamps, paper tears). **NEVER mix modern glossy Keynote cards, neon HUDs, or Swiss-modern elements into a Vox scene.**
+- **The 6 Locked House Styles & Documentary Directions**:
+  1. *Newsroom Collage (Default)*: Aged newsprint, halftone B&W cutouts with offset red strokes, giant stat numbers treated as physical characters.
+  2. *Mixed-Media Paper*: Bold primary color blocks, archival cutouts, black marker circles, geometric drafting tape.
+  3. *3D Paper Diorama*: Heavy craft paper, deep depth-of-field, sepia layers, letterpress props.
+  4. *Detective Casefile (Murder Board)*: Dark corkboard, red yarn connecting pushpins between suspect products and lab proof, manila evidence folders with `[CLASSIFIED]` stamps, typewriter text, fingerprint smudges.
+  5. *Polaroid Forensic Snapshot*: Authentic Polaroid frames with wide chins, handwritten Sharpie notes, chemical developing emulsion bloom, scotch tape, paperclips pinning field receipts. Ideal for high-stakes scene openers and test bench reveals.
+  6. *Tactical Cartography (Johnny Harris Map)*: Tilted 3D topographic & architectural contour blueprints, animated red route trajectories, glowing GPS pins, coordinate crosshairs, torn paper revealing satellite terrain.
+- **Dual Execution Pathways**:
+  - *Generative Video Prompts (Google Flow / Omni Flash 1.1)*: Structured 5-line prompts (`STYLE REFERENCE`, `SCENE`, `MOTION`, `AUDIO`, `NEGATIVE`) with 3 physical depths (BG/MG/FG) and diegetic Foley sound design (NO voiceover, NO music).
+  - *Deterministic Remotion Engine*: Code-based rendering using `Halftone`, `TearReveal`, `AlertWash`, and `VoxStamp`.
+
+### Track 3: OEM Video & Real-World B-Roll Ingestion (`Plug-in Renewables`)
+- **Asset Library**: [`C:\Users\user\Downloads\Plug-in Renewables\`](file:///C:/Users/user/Downloads/Plug-in%20Renewables/)
+- **Scope**: Ingesting pristine 1080p and 4K official manufacturer footage, real balcony installation documentaries, and teardowns.
+- **The 3 Non-Negotiable Operating Rules**:
+  1. *Collision Avoidance*: Never place motion graphics or telemetry over baked-in specs or manufacturer titles. Position graphics strictly in clean negative space.
+  2. *The Premiere Pro Subtitle Crop*: Scale up 115%–125% and push `translateY(-35px)` to crop out foreign review subtitles, captions, or watermarks.
+  3. *Rapid Spring Punch-In*: Expand from a focal card to full bleed within 8–15 frames using a snappy spring.
+
+### Track 4: YouTube Shorts Viral Engine
+- **Core Domain**: Automated vertical 9:16 (1080x1920) production pipeline.
+- **Skill Engine**: Handled by [`youtube-shorts-viral-engine`](C:\Users\user\.gemini\config\skills\youtube-shorts-viral-engine\SKILL.md).
+- **Features**: Hybrid 70% zoom framing, Microsoft Edge TTS Andrew neural voiceover, optical-center kinetic subtitles, anti-watermark asset curation, and immediate product hook architecture.
+
+### Execution Frameworks Role Clarification
+| Tool / Framework | Role in the Pipeline |
+| :--- | :--- |
+| **Remotion** | **Code-Based Video Compositor & Sequencer**: The engine where Modern Motion Design (Specs 1–8), imported OEM videos, and synchronous acoustic Foley (`.wav`) are coded, layered, animated, and rendered into deliverable MP4s. |
+| **Google Flow / Omni Flash 1.1** | **Generative AI Diffusion Video**: Creates organic camera moves and physical video clips for Track 2 (Vox) where hand-coded motion graphics would look sterile. |
+| **Premiere Pro / DaVinci Resolve** | **Master NLE Editing Timeline**: The master timeline where the 15-minute voiceover is cut with the individual modular B-rolls from `motion_clips/`. |
+
+---
+
+## 6. Canonical Deliverable Naming & Output Law
 
 ### 1. Canonical Delivery Directory:
 Every finished MP4 deliverable **MUST** be rendered directly to:
@@ -157,7 +237,7 @@ Always purge temporary PNG stills from `preview_frames/` or `out/` after verific
 
 ---
 
-## 6. Core Motion Design Commandments (Anti-AI Slop)
+## 7. Core Motion Design Commandments (Anti-AI Slop)
 
 1. **The Full Canvas Trap**: Never open a scene at frame 0 with pre-assembled layouts. Elements arrive word-by-word with spoken audio.
 2. **The Atomic Staggering Law**: Never animate separable elements together. Every product, metric, or clause gets its own isolated entrance and Foley punch.
@@ -167,17 +247,22 @@ Always purge temporary PNG stills from `preview_frames/` or `out/` after verific
 6. **Permanent Text Visibility**: Highlighters sweep behind permanent high-contrast text.
 7. **Absolute Media Relevance**: Never use generic stock footage (wind turbines, random drone shots) as filler.
 8. **The Premiere Pro Subtitle Crop**: Crop out lower-third subtitles by scaling `115%–125%`.
+9. **The Authentic Sourcing Law (No Synthetic SVGs for Real Subjects)**:
+   - Never generate synthetic SVG line drawings for real-world architectural landmarks (e.g. Eiffel Tower, Brandenburg Gate), physical venues, or real hardware products.
+   - Always search the web and extract authentic, high-resolution photographic transparent PNG cutouts. Real physical texture, metal reflection, and architectural realism are mandatory for documentary credibility.
+10. **The Deep Asset Harvest Mandate (Script-Proportional Scope)**:
+   - For long-form teardowns, comparisons, and product reviews, NEVER settle for a superficial 3–4 images. The depth of asset harvesting must match the script's narrative scope: systematically collect heroes, exploded internals, rear I/O, accessories, lifestyle installations, competitor benchmarks, predecessor hardware, and editorial launch event photos into `product_images/<brand>/`.
 
 ---
 
-## 7. Acoustic Foley Sound Design (`public/sfx/`)
+## 8. Acoustic Foley Sound Design (`public/sfx/`)
 
 Every visual entrance or state transition **MUST** have a synchronized Foley hit:
 `swoosh.wav`, `click.wav`, `pop.wav`, `thud.wav`, `stamp_slam.wav`, `draw.wav`, `camera_click.wav`.
 
 ---
 
-## 8. Windows PowerShell Execution Rule
+## 9. Windows PowerShell Execution Rule
 
 Always run Remotion commands via `cmd /c`:
 ```powershell
