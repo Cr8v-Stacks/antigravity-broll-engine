@@ -108,21 +108,24 @@ When the user selects an asset source or trusts the engine, **the agent must NEV
 ---
 
 ### Step 4: Visual Spec Guidance & In-App Video Showcase (Multi-Select Enabled)
-Before asking the user to pick specs, provide a clickable link to the permanent video showcase:
-👉 **[Open Studio Spec Video Showcase](file:///C:/Users/user/.gemini/config/skills/broll/references/spec_video_showcase.md)**
-Then call `ask_question` with `is_multi_select: true` so the user can select one or multiple archetypes to blend:
-- **Question**: *"Which Spec Archetype(s) would you like to draw from as guidance addons?"*
-- **Options**:
-  - `(Recommended) Let the script dictate the specs`
-  - `I trust your creative eye — Pick the best specs for this scene`
-  - `Spec 1: ProductSpec — Hardware hero, internal specs, exploded CAD, leader lines`
-  - `Spec 2: RatingScore — Broadcaster scoreboard, weighted multipliers, review badges`
-  - `Spec 3: Comparison — Conceptual split-screen versus, trade-offs, OTA vs Recall`
-  - `Spec 4: MetricTelemetry — Live animated decibel VU meter, thermal gauges, waveforms`
-  - `Spec 5: QuoteReceipt — Dark-mode forum post card (Reddit/forums) with felt-tip highlighter`
-  - `Spec 6: StatementSpec — Provocative thesis hooks, lone words, massive stat punches (£1,000+)`
-  - `Spec 7: SequentialEmphasis — Comma-separated symptom lists, progressive multi-beat locks`
-  - `Spec 8: ForensicAudit — Dense multi-pillar criteria rows, mechanical clicks, verdict stamp`
+Before presenting the spec options to the user:
+1. **Provide the Clickable Showcase Link**:
+   Always provide the permanent, working link to the native video carousel showcase:
+   👉 **[Open Studio Spec Video Showcase](file:///C:/Users/user/.gemini/config/skills/broll/references/spec_video_showcase.md)**
+   *(Note: This reference file contains the live carousel and embedded MP4 videos for all 8 specs with full playback controls).*
+2. **Call `ask_question` with `is_multi_select: true`**:
+   - **Question**: *"Which Spec Archetype(s) would you like to draw from as guidance addons?"*
+   - **Options**:
+     - `(Recommended) Let the script dictate the specs`
+     - `I trust your creative eye — Pick the best specs for this scene`
+     - `Spec 1: ProductSpec — Hardware hero, internal specs, exploded CAD, leader lines`
+     - `Spec 2: RatingScore — Broadcaster scoreboard, weighted multipliers, review badges`
+     - `Spec 3: Comparison — Conceptual split-screen versus, trade-offs, OTA vs Recall`
+     - `Spec 4: MetricTelemetry — Live animated decibel VU meter, thermal gauges, waveforms`
+     - `Spec 5: QuoteReceipt — Dark-mode forum post card (Reddit/forums) with felt-tip highlighter`
+     - `Spec 6: StatementSpec — Provocative thesis hooks, lone words, massive stat punches (£1,000+)`
+     - `Spec 7: SequentialEmphasis — Comma-separated symptom lists, progressive multi-beat locks`
+     - `Spec 8: ForensicAudit — Dense multi-pillar criteria rows, mechanical clicks, verdict stamp`
 *(Note: If the script section demands an archival investigative documentary aesthetic, select the dedicated Vox-Style track instead).*
 
 ---
