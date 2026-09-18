@@ -36,54 +36,64 @@ This skill powers the end-to-end transformation of YouTube video scripts into br
 ## 3. The 4 Fundamental User-Experience Commandments
 
 1. **Sequential Questioning (One Step at a Time)**:
-   - **NEVER dump a wall of 4 or 5 questions in a single turn.**
-   - Guide the user step-by-step: first determine the objective, then ask for the script section, then establish media/visual direction, and finally ideate concepts.
+   - **NEVER dump a wall of questions in a single turn.**
+   - Follow the creator's natural thought process:
+     1. Starting Point (What do you have right now?)
+     2. Script Content (Which line or paragraph are we bringing to life?)
+     3. Media & Assets (Where are the visuals coming from?)
+     4. Visual Spec Archetype (What starting visual blueprint fits best?)
+     5. Concept Pitch (2–3 director concepts to choose from).
 2. **Always Provide "I Trust You / Make the Best Creative Decision"**:
-   - For every question regarding styling, typography, colors, or spec choice, ALWAYS include an option:
-     `"(Recommended) I trust you — Make the best creative decision based on the script"`.
-   - Never block a user who simply wants expert execution without having to pick font names or color hexes.
+   - For every styling, media, or spec question, ALWAYS include an option:
+     `"(Recommended) I trust your creative eye — Choose the best direction for this script"`.
+   - Never block a creator who just wants great results without having to make technical design choices.
 3. **Media Agility (Don't Force Pure Vector Motion)**:
-   - Always offer media sourcing options:
-     - Pure Motion Graphics (vector typography, dynamic geometric staging, Foley sound design)
-     - Mixed Media (motion graphics + authentic images/video cuts)
-     - Local Drive Assets (OEM 4K videos, product cutouts in `public/product_images/`, local folders)
+   - Real documentaries blend vector graphics with authentic imagery and video clips:
+     - Pure Motion Graphics (vector typography, animated meters, studio canvas)
+     - Mixed Media (motion graphics + authentic product photos & receipts)
+     - Local Drive Assets (OEM 4K clips, teardowns, hardware cutouts)
      - Stock Footage Sourcing (Pexels, Pixabay, Mixkit)
-     - Web Evidence Receipts (Reddit threads, lab graphs, customer forum screenshots)
+     - Web Evidence Receipts (Reddit cards, lab graphs, forum posts)
 4. **In-App Visual Spec Showcase**:
-   - Users cannot visualize abstract spec numbers in their head.
-   - Present the in-app interactive visual showcase (`spec_showcase.html`) so the user can see, watch, and understand what the specs look like before choosing.
+   - Creators cannot visualize abstract spec numbers in their heads.
+   - Present the in-app interactive visual showcase artifact (`spec_showcase.html`) so the user can see, watch, and understand what each spec looks like before choosing.
 
 ---
 
-## 4. The Interactive Onboarding Workflow (`ask_question` Tree)
+## 4. The Creator's Natural Onboarding Sequence (`ask_question` Tree)
 
-When `/broll` is invoked or a new B-roll task begins, execute this structured inquiry **one question at a time**:
+When `/broll` is invoked or a new B-roll task begins, ask **only ONE question at a time** in this exact natural order:
 
-### Turn 1: Determine the Objective
-Call `ask_question` with a single, clear question:
-- **Question**: *"Welcome to the B-Roll Motion Graphics Engine! What would you like to focus on?"*
+### Step 1: The Starting Point (What do you have?)
+Call `ask_question`:
+- **Question**: *"Welcome to the B-Roll Motion Graphics Engine! How would you like to begin?"*
 - **Options**:
-  - `(Recommended) Create a high-retention B-roll for a specific script paragraph or spoken cue`
-  - `Scout an entire script to map out B-roll candidate opportunities and timing`
-  - `Explore and preview the 8 Spec Archetypes before deciding on a direction`
-  - `Configure project design system (color palette, typography, deliverable path)`
+  - `(Recommended) I have a specific paragraph/sentence ready to turn into B-roll`
+  - `I have a full script — help me scout and identify the best B-roll moments`
+  - `Show me visual examples of what B-rolls and specs you can create first`
 
 ---
 
-### Turn 2: Receive Script Section & Media Source
-Once the user selects their objective:
-- Ask for the 1–3 sentence script paragraph they want to animate.
-- Ask about **Media & Visual Agility**:
-  - `(Recommended) I trust you — Pick the best visual combination for this script section`
+### Step 2: Content Input (What is the script talking about?)
+- If the user has a paragraph: Ask them to paste the 1–3 sentence script line.
+- If the user wants scouting: Ask them to share the script or script section.
+
+---
+
+### Step 3: Media Sourcing & Asset Direction (How will it be built?)
+Once the script line is provided, call `ask_question`:
+- **Question**: *"Where should we source the visuals and assets for this B-roll?"*
+- **Options**:
+  - `(Recommended) I trust you — Pick the best visual combination for this script line`
   - `Mixed Media: Motion typography blended with authentic product photos & receipts`
-  - `Pure Motion Graphics: Vector typography, telemetry gauges, and studio backdrops`
+  - `Pure Motion Graphics: Vector typography, telemetry meters, and studio backdrops`
   - `OEM & Local Footage: Use official videos and hardware cutouts from local folders`
-  - `Documented Proof: Focus on Reddit cards, forum complaints, and lab test graphs`
+  - `Documented Evidence: Focus on Reddit dark-mode cards and lab test charts`
 
 ---
 
-### Turn 3: Visual Spec Guidance & In-App Showcase
-Before asking the user to pick a spec, provide a link to the interactive visual showcase artifact:
+### Step 4: Visual Spec Guidance & In-App Showcase
+Provide a clickable link to the interactive visual showcase:
 `[Open In-App Visual Spec Showcase](file:///.../spec_showcase.html)`
 Then call `ask_question`:
 - **Question**: *"Which Spec Archetype should serve as your starting guidance addon?"*
@@ -92,7 +102,7 @@ Then call `ask_question`:
   - `Spec 1: ProductSpec — Hardware hero, internal specs, exploded CAD, leader lines`
   - `Spec 2: RatingScore — Broadcaster scoreboard, weighted multipliers, review badges`
   - `Spec 3: Comparison — Conceptual split-screen versus, trade-offs, OTA vs Recall`
-  - `Spec 4: MetricTelemetry — Live animated decibel VU meter, thermal gauges, dynamic waveforms`
+  - `Spec 4: MetricTelemetry — Live animated decibel VU meter, thermal gauges, waveforms`
   - `Spec 5: QuoteReceipt — Dark-mode forum post card (Reddit/forums) with felt-tip highlighter`
   - `Spec 6: StatementSpec — Provocative thesis hooks, lone words, massive stat punches (£1,000+)`
   - `Spec 7: SequentialEmphasis — Comma-separated symptom lists, progressive multi-beat locks`
@@ -100,18 +110,12 @@ Then call `ask_question`:
 
 ---
 
-### Turn 4: The 3-Concept Ideation Step (No Code Yet!)
-Analyze the script excerpt and present **2 to 3 distinct creative concepts**:
-- **Concept 1**: Minimalist Editorial / Kinetic Typography focus
-- **Concept 2**: Physical Hardware & Spatial Displacement focus
-- **Concept 3**: Authentic Evidence / Document Reality / Mixed Media focus
-Use `ask_question` to let the user select the winning concept before writing any code.
+### Step 5: The 3-Concept Pitch (Director's Treatment)
+Before writing any code, pitch **2 to 3 creative treatments** specifically tailored to the user's script line. Call `ask_question` to let the user pick their favorite concept.
 
 ---
 
 ## 5. Canonical Deliverable Naming & Output Law
-
-To ensure total clarity on where files live and which section they correspond to:
 
 ### 1. Canonical Delivery Directory:
 Every finished MP4 deliverable **MUST** be rendered directly to:
@@ -142,59 +146,27 @@ Always purge temporary PNG stills from `preview_frames/` or `out/` after verific
 
 ## 6. Core Motion Design Commandments (Anti-AI Slop)
 
-1. **The Cardinal Sin (The Full Canvas Trap)**:
-   - Never open a scene at frame 0 with cards and text already sitting on the canvas.
-   - Elements arrive word-by-word with the spoken audio. Maintain unresolved tension.
-2. **The Atomic Staggering Law**:
-   - If elements can be animated separately, **never animate them together**.
-   - Multiple subjects, model names, or metrics must enter sequentially with isolated Foley hits.
-3. **The "Lone Words" Rule**:
-   - Action words, model names (`Hyper 2000`), dates, and list items must exist **alone on screen** with zero clutter or borders.
-4. **Dead-Center Vertical Alignment (Anti-Top Bunching)**:
-   - Never align elements to the top edge when the bottom space is unused. Center content vertically (`top: 50%`, `transform: translateY(-50%)`).
-5. **Hero Subject Persistence (Anti-Disjointed Cut Law)**:
-   - When transitioning between scenes within a paragraph, glide the persisting hero subject to dead-center stage instead of abruptly cutting to black.
-6. **Permanent Text Visibility (The Highlighter Rule)**:
-   - Never let text disappear or turn illegible during a highlighter sweep. The highlighter is a colored background gradient sweeping behind permanent high-contrast text.
-7. **Absolute Media Relevance**:
-   - Never use generic, unrelated stock footage (wind turbines, random drone shots) as filler. Every asset must directly depict the exact brand or topic discussed.
-8. **The "Premiere Pro" Subtitle Crop**:
-   - When using source videos with lower-third subtitles, scale up (`115%–125%`) and translateY to push subtitles completely off-screen.
+1. **The Full Canvas Trap**: Never open a scene at frame 0 with pre-assembled layouts. Elements arrive word-by-word with spoken audio.
+2. **The Atomic Staggering Law**: Never animate separable elements together. Every product, metric, or clause gets its own isolated entrance and Foley punch.
+3. **The Lone Words Rule**: Action words, model names (`Hyper 2000`), and dates must exist alone on screen with zero clutter or borders.
+4. **Dead-Center Vertical Alignment**: All content must be centered vertically (`top: 50%`, `transform: translateY(-50%)`).
+5. **Hero Subject Persistence**: Persisting subjects glide to dead-center stage instead of abruptly cutting to black.
+6. **Permanent Text Visibility**: Highlighters sweep behind permanent high-contrast text.
+7. **Absolute Media Relevance**: Never use generic stock footage (wind turbines, random drone shots) as filler.
+8. **The Premiere Pro Subtitle Crop**: Crop out lower-third subtitles by scaling `115%–125%`.
 
 ---
 
 ## 7. Acoustic Foley Sound Design (`public/sfx/`)
 
 Every visual entrance or state transition **MUST** have a synchronized Foley hit:
-- `swoosh.wav`: Smooth spatial transitions, card slides, camera dollies.
-- `click.wav`: Bullet points, spec rows, toggle switches, caliper triggers.
-- `pop.wav`: Badges, tags, pill callouts, socket snaps.
-- `thud.wav`: Solid hardware lock, crate landing, heavy data arrival.
-- `stamp_slam.wav`: Decisive audit stamps, warning seals, verdict slams.
-- `draw.wav`: Highlighter sweeps, laser scans, oscilloscope lines.
-- `camera_click.wav`: Evidence screenshots, photo receipts, lab test charts.
+`swoosh.wav`, `click.wav`, `pop.wav`, `thud.wav`, `stamp_slam.wav`, `draw.wav`, `camera_click.wav`.
 
 ---
 
 ## 8. Windows PowerShell Execution Rule
 
-Because PowerShell execution policy blocks raw `npx` scripts on Windows, **always run Remotion commands via `cmd /c`**:
-
+Always run Remotion commands via `cmd /c`:
 ```powershell
-# Typecheck
-cmd /c npx tsc --noEmit
-
-# Render Still for Inspection
-cmd /c npx remotion still <CompositionID> preview_frames/frame_60.png --frame=60
-
-# Render Master Deliverable
 cmd /c npx remotion render <CompositionID> motion_clips/<canonical_name>.mp4
 ```
-
----
-
-## 9. Reference Documentation Index
-
-- [The 8 Canonical Specs Catalog](./references/spec-catalog.md)
-- [Acoustic Foley Soundboard & Audio Timing](./references/foley-soundboard.md)
-- [Anti-AI Slop & Visual Design Commandments](./references/anti-ai-slop.md)
