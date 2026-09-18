@@ -85,15 +85,16 @@ Call `ask_question`:
 
 ---
 
-### Step 3: Media Sourcing & Asset Direction (How will it be built?)
-Once the script line is provided, call `ask_question`:
+### Step 3: Media Sourcing & Asset Direction (Multi-Select Enabled)
+Once the script line is provided, call `ask_question` with `is_multi_select: true`:
 - **Question**: *"Where should we source the visuals and assets for this B-roll?"*
 - **Options**:
-  - `(Recommended) I trust you — Pick the best visual combination for this script line`
-  - `Mixed Media: Motion typography blended with authentic product photos & receipts`
+  - `(Recommended) Multi-source blend: Combine the best available assets automatically`
+  - `Local Drive Assets: Use official videos and hardware cutouts from local project folders`
+  - `Web Evidence Receipts: Search and pull authentic forum post receipts & lab test charts`
+  - `Stock Video Sourcing: Find high-quality relevant stock footage (Pexels, Mixkit)`
   - `Pure Motion Graphics: Vector typography, telemetry meters, and studio backdrops`
-  - `OEM & Local Footage: Use official videos and hardware cutouts from local folders`
-  - `Documented Evidence: Focus on Reddit dark-mode cards and lab test charts`
+  - `I trust you — Make the best creative decision based on the script`
 
 ---
 
