@@ -74,9 +74,14 @@ Call `ask_question`:
 
 ---
 
-### Step 2: Content Input (What is the script talking about?)
-- If the user has a paragraph: Ask them to paste the 1–3 sentence script line.
-- If the user wants scouting: Ask them to share the script or script section.
+### Step 2: Content Input (Universal & Project-Agnostic)
+When the user indicates they have text or wants to start:
+Call `ask_question`:
+- **Question**: *"How would you like to provide the script text for this B-roll?"*
+- **Options**:
+  - `(Recommended) I will paste my 1–3 sentence script line directly in the chat`
+  - `Scan my workspace for script files (.md or .txt)`
+  - `Provide a sample test line so I can see how the engine works first`
 
 ---
 
