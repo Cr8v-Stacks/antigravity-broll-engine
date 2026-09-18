@@ -98,9 +98,9 @@ Once the script line is provided, call `ask_question` with `is_multi_select: tru
 
 ---
 
-### Step 4: Visual Spec Guidance & In-App Showcase (Multi-Select Enabled)
-Before asking the user to pick specs, provide a clickable link to the interactive visual showcase:
-`[Open In-App Visual Spec Showcase](file:///.../spec_showcase.html)`
+### Step 4: Visual Spec Guidance & In-App Video Showcase (Multi-Select Enabled)
+Before asking the user to pick specs, provide a clickable link to the native video showcase artifact:
+`[Open Studio Spec Video Showcase](file:///.../spec_video_showcase.md)`
 Then call `ask_question` with `is_multi_select: true` so the user can select one or multiple archetypes to blend:
 - **Question**: *"Which Spec Archetype(s) would you like to draw from as guidance addons?"*
 - **Options**:
