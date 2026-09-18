@@ -74,14 +74,14 @@ Call `ask_question`:
 
 ---
 
-### Step 2: Content Input (Universal & Project-Agnostic)
+### Step 2: Content Input (Universal & Flexible)
 When the user indicates they have text or wants to start:
 Call `ask_question`:
-- **Question**: *"How would you like to provide the script text for this B-roll?"*
+- **Question**: *"How would you like to provide the script content for this B-roll?"*
 - **Options**:
-  - `(Recommended) I will paste my 1–3 sentence script line directly in the chat`
-  - `Scan my workspace for script files (.md or .txt)`
-  - `Provide a sample test line so I can see how the engine works first`
+  - `(Recommended) I will paste my script paragraph or section directly in the chat`
+  - `I will share the path or name of my script file`
+  - `Provide a sample script paragraph so I can test the engine first`
 
 ---
 
