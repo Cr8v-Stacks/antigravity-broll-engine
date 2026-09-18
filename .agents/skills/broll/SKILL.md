@@ -113,7 +113,8 @@ Before asking the user to pick specs, provide a clickable link to the permanent 
 Then call `ask_question` with `is_multi_select: true` so the user can select one or multiple archetypes to blend:
 - **Question**: *"Which Spec Archetype(s) would you like to draw from as guidance addons?"*
 - **Options**:
-  - `(Recommended) I trust you — Let the narrative dictate the blend of specs`
+  - `(Recommended) Let the script dictate the specs`
+  - `I trust your creative eye — Pick the best specs for this scene`
   - `Spec 1: ProductSpec — Hardware hero, internal specs, exploded CAD, leader lines`
   - `Spec 2: RatingScore — Broadcaster scoreboard, weighted multipliers, review badges`
   - `Spec 3: Comparison — Conceptual split-screen versus, trade-offs, OTA vs Recall`
