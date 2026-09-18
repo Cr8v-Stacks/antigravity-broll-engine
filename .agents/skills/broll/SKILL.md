@@ -116,8 +116,15 @@ Then call `ask_question` with `is_multi_select: true` so the user can select one
 
 ---
 
-### Step 5: The 3-Concept Pitch (Director's Treatment)
-Before writing any code, pitch **2 to 3 creative treatments** specifically tailored to the user's script line. Call `ask_question` to let the user pick their favorite concept.
+### Step 5: The 3-Concept Pitch (Dynamic Script Synthesis — Zero Canned Concepts)
+Before writing any code, the agent MUST analyze the user's provided script text dynamically:
+1. **Narration Timing Math**: Word count ÷ ~2.25 words/sec = estimated seconds and frames @ 30fps.
+2. **Core Emotional Stakes & Conflict**: What is the narrator proving, challenging, revealing, or debunking?
+3. **Synthesize 3 Distinct Creative Concepts** specifically tailored to those exact spoken words:
+   - **Concept A (Minimalist Editorial / Kinetic Rhythm)**: Focus on high-contrast typography, lone words, and progressive multi-scene reveals on clean studio paper.
+   - **Concept B (Tactile / Analytical / Physical Evidence)**: Focus on hardware cutouts, animated telemetry meters, data graphs, or spatial displacement.
+   - **Concept C (Authentic Mixed Media / Cinematic Hold)**: Focus on real footage, documented receipts, or cinematic video holds with subtle Ken Burns push and corner editorial tags.
+4. **Interactive Modal Call**: Present the 3 concepts dynamically via `ask_question` with a 1-sentence breakdown of each concept's visual progression so the user can click their favorite.
 
 ---
 
