@@ -1,6 +1,6 @@
 # 🎨 Anti-AI Slop & Editorial Motion Design Commandments
 
-These 15 non-negotiable visual rules separate broadcast-grade editorial motion design from generic, disposable "AI slop".
+These 20 non-negotiable visual rules separate broadcast-grade editorial motion design from generic, disposable "AI slop".
 
 ---
 
@@ -111,3 +111,44 @@ These 15 non-negotiable visual rules separate broadcast-grade editorial motion d
 
 ## 15. The Deep Asset Harvest Mandate (Script-Proportional Scope)
 - For long-form teardowns, comparisons, and product reviews, NEVER settle for a superficial 3–4 images. The depth of asset harvesting must match the script's narrative scope: systematically collect heroes, exploded internals, rear I/O, accessories, lifestyle installations, competitor benchmarks, predecessor hardware, and editorial launch event photos into `product_images/<brand>/`.
+
+---
+
+## 16. Strict Ban on Script Line Annotations & Fake Telemetry (The Anti-AI Slop Law)
+- **ABSOLUTELY NEVER** render script line references (e.g. `Lines 145 to 175`, `Lines 207–211`) or internal development tags anywhere in user-facing visuals.
+- **ABSOLUTELY NEVER** render fake telemetry or synthetic metadata stamps like `BENCHMARK VERIFIED`, `TIMECODE 02:00`, `AUDIO CHOP COMPLIANT`, or artificial status badges.
+- Developer scratch notes, script line references, and synthetic verification badges are the definition of "AI slop" and are strictly forbidden from all visual output. Every visual element must be authentic editorial typography or real hardware data.
+
+---
+
+## 17. The Neo-Brutalist Design Standard ("Personality Without Aggression")
+- When cards, containers, or scoreboard modules need distinctive character, employ **Neo-Brutalism**:
+  - Master cards: High-contrast solid `#FFFFFF` cards on a warm studio paper desk background (`#F4F0E8` / `#F5F2EB`) with subtle architectural grid lines (`48px 48px`).
+  - Bold borders: Crisp `3px` to `3.5px solid #0F172A` (or pure black).
+  - Hard tactile drop shadows: `6px 6px 0px #0F172A`, `8px 8px 0px #0F172A`, or `10px 10px 0px #0F172A`. **NEVER use blurry, muddy CSS box-shadows or diffuse gradients.**
+  - Refined corner rounding: `borderRadius: 6px` to `8px` (clean, contemporary neo-brutalism, never jagged or 90s web 1.0).
+  - Solid color brutalist tags: Solid accent blocks (cobalt `#2563EB`, amber `#D97706`, emerald `#059669`, crimson `#DC2626`) with `2px solid #0F172A` borders and hard shadows.
+
+---
+
+## 18. Editorial Comparison Geometry: Compact Height & Edge-Aligned Framing (Zero Dead White Space)
+- **Compact Card Sizing**: Never stretch comparison cards to fill the full vertical screen height, which creates massive awkward white gaps in the middle. Constrain cards to a compact, well-proportioned height (`480px` – `500px`), centered vertically on the screen.
+- **Edge-Aligned Product Framing**: Never center a floating cutout in an empty void while text is left-aligned. House hardware images inside dedicated brutalist display frames (`border: 2px solid #0F172A`, `borderRadius: 6px`, subtle `#F8FAFC` background) that span the full width of the card's inner margins, creating harmonious edge alignment with the content.
+- **Docked Verdict Badges**: Dock verdict stamps/badges directly beneath the bullet specs with clean margins (`marginTop: 12px`), completely eliminating empty dead space.
+- **Color-Coded Semantic Badges**: High-contrast tags (`#ECFDF5` emerald for positive, `#FFFBEB` amber for caution/baseline, `#FEF2F2` crimson for penalty/failure) with solid `2px` borders and hard brutalist shadows.
+
+---
+
+## 19. Glitch-Free Video Playback with `<OffthreadVideo>` (Anti-Frame-Skipping Law)
+- **CRITICAL REMOTION DIRECTIVE**: NEVER use HTML5 `<Video>` for video footage with camera panning or horizontal scrolling! Chromium drops frames and stutters during headless seeks, producing visible video glitching.
+- **ALWAYS use `<OffthreadVideo>`** from `remotion`, which uses native FFmpeg to extract frames deterministically, ensuring 100% glitch-free horizontal scrolling and panning.
+- Start from frame 0 (or constant keyframe offset), with no unnecessary looping.
+
+---
+
+## 20. Chapter B-Roll Transitions: Canonical 6.0s Calibration, Retention Hooks & Pure Negative Space
+- **Strict Origin from Script**: Chapters MUST strictly follow the narrative chapters defined in the actual script (e.g. Chapter 01: *The Balcony Shading Trap*, Chapter 02: *The Bedroom Acoustic Reality*, etc.). Never invent generic corporate titles like "Prologue" or "The Paris Launch".
+- **Duration**: Exactly **6.0 seconds (180 frames @ 30fps)** per chapter. Continuous master reel: **60.0 seconds (1,800 frames)**.
+- **Zero Voiceover / Audio Timeline Chop**: Built specifically to be chopped during video editing. The narrator does not speak over the chapter card; it relies exclusively on frame-accurate acoustic Foley (`paper_slide.wav`, `click.wav`, `thud.wav`, `pop.wav`).
+- **High-Tension Dopamine Curiosity Hook ("What to Watch For")**: Every chapter transition must contain a bold, provocative retention question in quotes (`“...”`) that creates an open loop and prevents viewer drop-off.
+- **Zero Eyebrow / Zero Timecode Law**: NEVER add decorative uppercase pills or fake timestamps (`TIMECODE 02:00`). Pure neo-brutalist typography only.

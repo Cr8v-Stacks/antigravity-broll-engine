@@ -14,21 +14,18 @@ export interface ScoreItem {
 
 export interface Spec2Props {
   categoryTitle: string;
-  weightMultiplier: string;
+  weightMultiplier?: string;
   firstWordsCue?: string;
   scores: ScoreItem[];
 }
 
 export const Spec2_RatingScore: React.FC<Spec2Props> = ({
   categoryTitle,
-  weightMultiplier,
   scores,
 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
-  const stampProgress = spring({ frame: frame - 12, fps, config: { damping: 10, mass: 0.6 } });
-  const stampScale = interpolate(stampProgress, [0, 1], [1.8, 1]);
 
   return (
     <div style={{ width: "100%", height: "100%", position: "relative", overflow: "hidden", fontFamily: "Inter, sans-serif" }}>
@@ -51,29 +48,9 @@ export const Spec2_RatingScore: React.FC<Spec2Props> = ({
         {/* Header Row */}
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 34 }}>
           <div>
-            <div style={{ fontSize: 13, fontWeight: 800, color: "#94A3B8", letterSpacing: "0.22em", textTransform: "uppercase", marginBottom: 8 }}>
-              BENCHMARK CATEGORY
-            </div>
             <h1 style={{ fontSize: 52, fontWeight: 900, color: "#FFFFFF", margin: 0, letterSpacing: "-0.01em" }}>
               {categoryTitle}
             </h1>
-          </div>
-
-          <div
-            style={{
-              transform: `scale(${stampScale})`,
-              background: "rgba(245, 158, 11, 0.15)",
-              border: "2px solid #F59E0B",
-              borderRadius: 8,
-              padding: "8px 22px",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              boxShadow: "0 0 25px rgba(245, 158, 11, 0.25)",
-            }}
-          >
-            <span style={{ fontSize: 11, fontWeight: 800, color: "#F59E0B", letterSpacing: "0.2em" }}>CATEGORY WEIGHT</span>
-            <span style={{ fontSize: 32, fontWeight: 900, color: "#F59E0B", fontFamily: "monospace", lineHeight: 1.1 }}>{weightMultiplier}</span>
           </div>
         </div>
 

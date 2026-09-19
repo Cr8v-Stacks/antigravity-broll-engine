@@ -59,7 +59,7 @@ export const Spec8_ForensicAudit: React.FC<Spec8_ForensicAuditProps> = ({
   principleSubtitle = "More owners discussing firmware quirks does not inherently equal a higher component failure rate.",
   equationTitle = "COMPLAINT VOLUME ≠ FAILURE RATE",
   equationBadge = "UNTRACKED DENOMINATOR",
-  auditHeaderEyebrow = "BEYOND RAW POST COUNTS // METHODOLOGY MATRIX",
+  auditHeaderEyebrow = "",
   auditHeadline = "RECURRING PATTERN AUDIT",
   auditSubheadline = "SYNTHESIZING 5 INDEPENDENT VERIFICATION CHANNELS",
   auditRows = [
@@ -69,7 +69,7 @@ export const Spec8_ForensicAudit: React.FC<Spec8_ForensicAuditProps> = ({
     { num: "04", label: "ESCALATED SUPPORT & RMA LOGS", detail: "Manufacturer ticket responses & warranty resolutions" },
     { num: "05", label: "CROSS-REPORT CONSISTENCY", detail: "Identical failure signatures across isolated units", isHighlight: true },
   ],
-  verdictEyebrow = "RESEARCH FINDINGS CLASSIFICATION",
+  verdictEyebrow = "",
   verdictHeader = "DEFINITIVE LEGAL & ANALYTICAL DISCLOSURE",
   isTitle = "EDITORIAL\nASSESSMENTS",
   isDetail = "Independent evaluation of demonstrable hardware vulnerabilities, firmware updates & user pattern consistency.",
@@ -419,25 +419,27 @@ export const Spec8_ForensicAudit: React.FC<Spec8_ForensicAuditProps> = ({
           }}
         >
           <div style={{ transform: `translateY(${s2HeaderY}px)`, opacity: s2HeaderOp, marginBottom: 24 }}>
-            <div
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 10,
-                backgroundColor: "#F1F5F9",
-                border: "1.5px solid #000000",
-                padding: "4px 14px",
-                borderRadius: 3,
-                fontFamily: ibmPlexMonoFamily,
-                fontSize: 12,
-                fontWeight: 800,
-                letterSpacing: "0.2em",
-                color: "#000000",
-                marginBottom: 12,
-              }}
-            >
-              {auditHeaderEyebrow}
-            </div>
+            {auditHeaderEyebrow ? (
+              <div
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 10,
+                  backgroundColor: "#F1F5F9",
+                  border: "1.5px solid #000000",
+                  padding: "4px 14px",
+                  borderRadius: 3,
+                  fontFamily: ibmPlexMonoFamily,
+                  fontSize: 12,
+                  fontWeight: 800,
+                  letterSpacing: "0.2em",
+                  color: "#000000",
+                  marginBottom: 12,
+                }}
+              >
+                {auditHeaderEyebrow}
+              </div>
+            ) : null}
 
             <div
               style={{
@@ -548,21 +550,23 @@ export const Spec8_ForensicAudit: React.FC<Spec8_ForensicAuditProps> = ({
             opacity: s3SealOp,
           }}
         >
-          <div
-            style={{
-              backgroundColor: "#000000",
-              color: "#FFFFFF",
-              fontFamily: ibmPlexMonoFamily,
-              fontSize: 13,
-              fontWeight: 800,
-              letterSpacing: "0.25em",
-              padding: "6px 20px",
-              borderRadius: 3,
-              marginBottom: 20,
-            }}
-          >
-            {verdictEyebrow}
-          </div>
+          {verdictEyebrow ? (
+            <div
+              style={{
+                backgroundColor: "#000000",
+                color: "#FFFFFF",
+                fontFamily: ibmPlexMonoFamily,
+                fontSize: 13,
+                fontWeight: 800,
+                letterSpacing: "0.25em",
+                padding: "6px 20px",
+                borderRadius: 3,
+                marginBottom: 20,
+              }}
+            >
+              {verdictEyebrow}
+            </div>
+          ) : null}
 
           <div
             style={{

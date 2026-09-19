@@ -1,4 +1,4 @@
-﻿# 🎬 Studio B-Roll Spec Visual Showcase (Specs 1–8)
+# 🎬 Studio B-Roll Spec Visual Showcase (Specs 1–8)
 
 Watch the live motion graphics for each of the 8 canonical design specs below. Each slide features an auto-looping animated visual preview and a direct link to the master 1080p MP4 video with synchronous acoustic Foley sound design.
 
@@ -20,7 +20,7 @@ Spotlights a physical product or machine. Enters dead-center stage, scales with 
 - **Master Video**: [▶️ Open Full 1080p MP4 Video with Audio](file:///C:/Users/user/.gemini/config/skills/broll/assets/spec_previews/spec1_product.mp4)
 <!-- slide -->
 ### Spec 2: `RatingScore` (Broadcaster Scoreboard)
-Presents authoritative category scores with weighted multiplier badges (`WEIGHT: x2`), animated horizontal score progress bars, and proof receipts.
+Presents authoritative category scores with clean typography, animated horizontal score progress bars, and verified numerical marks (zero fake multiplier pills).
 
 ![Spec 2: RatingScore Animation](C:/Users/user/.gemini/config/skills/broll/assets/spec_previews/spec2_scoreboard.gif)
 

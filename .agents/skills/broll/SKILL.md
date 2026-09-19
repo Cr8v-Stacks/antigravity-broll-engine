@@ -124,17 +124,18 @@ The agent **MUST NOT wait until code writing to discover missing assets**. It mu
 > The specs are **Spatial Choreography Mindsets**—the architectural staging patterns developed by world-class documentary motion designers. 
 > The agent must select the best spec mindset for the script section, adapt its spatial physics, and explain why.
 
-### The 8 Spec Choreography Mindsets:
+### The 9 Spec Choreography Mindsets:
 | Spec | Choreography Mindset | Spatial Physics & Staging Rule | Example Script Application |
 | :---: | :--- | :--- | :--- |
 | **01** | **Hero Arrival & Stage Split** | Subject lands dead-center, establishes authority, then glides right (or moves up) to open negative space for companion data/leader lines. | Introducing a new solar generator, inverter, or architectural landmark. |
-| **02** | **Weighted Multiplier & Progress Fill** | Multiplier badge (`WEIGHT: x2`), horizontal progress bars filling sequentially to an authoritative score grade. | Benchmarking battery efficiency, durability scores, or warranty ratings. |
-| **03** | **Versus Tension & Split Showdown** | 50/50 stage split with glowing neon vertical seam, pitting competing entities in a locked showdown. | Comparing Hardware vs Software, OTA Patch vs Physical Recall, Brand A vs Brand B. |
+| **02** | **Benchmark Scoreboard & Progress Fill** | Clean category title, horizontal progress bars filling sequentially to verified scores (zero fake weight badges). | Benchmarking battery efficiency, durability scores, or warranty ratings. |
+| **03** | **Neo-Brutalist Comparison Showdown** | Compact 485px cards, edge-aligned product frames, 3px solid borders, docked verdict stamps, zero dead white space. | Comparing Hardware vs Software, OTA Patch vs Physical Recall, Brand A vs Brand B. |
 | **04** | **Live Telemetry & Measurement** | Dynamic needle sweep, thermal heat maps, live decibel VU meters, or solar wattage curves with alert zones. | Sound levels (dB), heat degradation (°C), solar input wattage dropping to 0W at sunset. |
 | **05** | **Factual Evidence & Forum Receipt** | Dark-mode forum post card (Reddit, forums, lab PDFs) with a sweeping felt-tip highlighter behind permanent text. | Citing customer complaints, forum receipts, firmware bugs, or lab test findings. |
 | **06** | **Lone Word Hook & Stat Slam** | Isolated temporal hook lands alone (`IN LATE 2023`), followed by a massive 2.4× stat slam (`€3,500`) with physical Foley thud. | Provocative thesis hooks, turning points, or financial shocks. |
 | **07** | **Sequential Push & Displace** | Item 1 enters center; when Item 2 enters center, Item 1 physically pushes left (`-440px`) to make room. When Item 3 enters, it takes the right (`+440px`). | Comma-separated lists of hardware, features, or failure symptoms. |
 | **08** | **Forensic Audit & Rubber Stamp** | Dense multi-pillar criteria rows checked off with mechanical clicks, sealed with an authoritative physical rubber stamp. | Deep audits, legal verdicts, safety compliance checks, final review verdict. |
+| **09** | **Editorial Chapter Transition** | 6.0s (180f) transition, OffthreadVideo backdrop, high-tension retention curiosity hook in quotes, zero voiceover. | Act breaks, narrative pivots, pacing structure. |
 
 ---
 
@@ -182,20 +183,21 @@ Before presenting the spec options to the user:
 1. **Provide the Clickable Showcase Link**:
    Always provide the permanent, working link to the native video carousel showcase:
    👉 **[Open Studio Spec Video Showcase](file:///C:/Users/user/.gemini/config/skills/broll/references/spec_video_showcase.md)**
-   *(Note: This reference file contains the live carousel and embedded MP4 videos for all 8 specs with full playback controls).*
+   *(Note: This reference file contains the live carousel and embedded MP4 videos for all specs with full playback controls).*
 2. **Call `ask_question` with `is_multi_select: true`**:
   - **Question**: *"Which Spec Archetype(s) would you like to draw from as guidance addons? (Review specs at: [Open Studio Spec Video Showcase](file:///C:/Users/user/.gemini/config/skills/broll/references/spec_video_showcase.md))"*
   - **Options**:
     - `(Recommended) Let the script dictate the specs`
     - `I trust your creative eye — Pick the best specs for this scene`
     - `Spec 1: ProductSpec — Hardware hero, internal specs, exploded CAD, leader lines`
-    - `Spec 2: RatingScore — Broadcaster scoreboard, weighted multipliers, review badges`
-    - `Spec 3: Comparison — Conceptual split-screen versus, trade-offs, OTA vs Recall`
+    - `Spec 2: RatingScore — Broadcaster scoreboard, progress bars, verified test marks`
+    - `Spec 3: Comparison — Neo-brutalist compact comparison, edge-aligned frames, docked stamps`
     - `Spec 4: MetricTelemetry — Live animated decibel VU meter, thermal gauges, waveforms`
     - `Spec 5: QuoteReceipt — Dark-mode forum post card (Reddit/forums) with felt-tip highlighter`
     - `Spec 6: StatementSpec — Provocative thesis hooks, lone words, massive stat punches (£1,000+)`
     - `Spec 7: SequentialEmphasis — Comma-separated symptom lists, progressive multi-beat locks`
     - `Spec 8: ForensicAudit — Dense multi-pillar criteria rows, mechanical clicks, verdict stamp`
+    - `Spec 9: ChapterTransition — 6.0s editorial chapter card, OffthreadVideo, retention open loop`
 *(Note: If the script section demands an archival investigative documentary aesthetic, select the dedicated Vox-Style track instead).*
 
 ---
@@ -207,7 +209,7 @@ Before writing any code, the agent MUST analyze the user's provided script text 
 3. **Spec Mindset Declaration**: Explicitly state which Spec Choreography Mindset(s) are adopted and why.
 4. **Synthesize 3 Distinct Creative Concepts** specifically tailored to those exact spoken words:
    - **Concept A (Keynote / Swiss Minimalist)**: Focus on high-contrast typography, lone words, clean whitespace, subtle radiant accent lines, and authoritative hardware cutouts.
-   - **Concept B (Technical Telemetry & Evidence)**: Focus on animated decibel/thermal gauges, exploded CAD dimensions, scoreboard multipliers, and verified forum receipts.
+   - **Concept B (Technical Telemetry & Evidence)**: Focus on animated decibel/thermal gauges, exploded CAD dimensions, scoreboard benchmarks, and verified forum receipts.
    - **Concept C (Kinetic Narrative Staged Reveal)**: Dynamic push-pull multi-scene choreography, sequential symptom locks, lone action words, and hero subject persistence across scene boundaries.
    *(Special Case: If the creator explicitly requested the Vox documentary aesthetic, the 3 concepts instead draw from the 3 locked Vox house styles: Newsroom Collage, Mixed-Media Paper, or 3D Paper Diorama via `vox-style`).*
 5. **Interactive Modal Call**: Present the 3 concepts dynamically via `ask_question` with a 1-sentence breakdown of each concept's visual progression so the user can click their favorite.
@@ -243,7 +245,7 @@ Before writing any code, the agent MUST analyze the user's provided script text 
 - [x] **Base Engine (`SKILL.md`)**: Re-read and digested complete macro architecture, material-first mandate, and execution laws.
 - [x] **Spec Catalog (`references/spec-catalog.md`)**: Reviewed layout mechanics and visual progression for chosen spec addons.
 - [x] **Acoustic Foley (`references/foley-soundboard.md` & `public/sfx/`)**: Loaded sound assets, frame offsets, and acoustic mix rules.
-- [x] **Anti-AI Slop & Editorial Laws (`references/anti-ai-slop.md`)**: Re-absorbed all 15 non-negotiable commandments and negative constraints.
+- [x] **Anti-AI Slop & Editorial Laws (`references/anti-ai-slop.md`)**: Re-absorbed all 20 non-negotiable commandments and negative constraints.
 - [x] **Asset & Media Verification**: Confirmed authentic photographic cutouts/videos are downloaded into `public/` (ZERO synthetic SVGs).
 
 #### 2. Material Strategy & Sourced Assets
@@ -321,7 +323,7 @@ Only **AFTER** conducting this full review and presenting this visible digest to
 
 ---
 
-## 7. Core Motion Design Commandments (The 15 Anti-AI Slop Laws)
+## 7. Core Motion Design Commandments (The 20 Anti-AI Slop Laws)
 
 1. **The Anti-Synthetic Drawing Mandate (CRITICAL LAW #1)**:
    - If an entity exists in the physical world (Eiffel Tower, solar panels, the sun, inverters, batteries, vehicles, tools), **NEVER draw it using SVG code or CSS shapes**. Sourcing authentic photographic cutouts or videos is mandatory.
@@ -372,6 +374,42 @@ Only **AFTER** conducting this full review and presenting this visible digest to
 
 15. **The Deep Asset Harvest Mandate (Script-Proportional Scope)**:
     - For long-form teardowns, comparisons, and product reviews, systematically collect heroes, exploded internals, rear I/O, accessories, lifestyle installations, competitor benchmarks, predecessor hardware, and editorial launch event photos into `product_images/<brand>/`.
+
+16. **Strict Ban on Developer Script Annotations & Fake Telemetry Metadata (The Anti-AI Slop Law)**:
+    - **NEVER** render script line references (e.g. `Lines 145 to 175`, `Lines 207–211`) or internal development tags anywhere in user-facing visuals.
+    - **NEVER** render fake telemetry or synthetic metadata stamps like `BENCHMARK VERIFIED`, `TIMECODE 02:00`, `AUDIO CHOP COMPLIANT`, or artificial status badges.
+    - Developer scratch notes, script line references, and synthetic verification badges are the definition of "AI slop" and are strictly forbidden from all visual output. Every visual element must be authentic editorial typography or real hardware data.
+
+17. **The Neo-Brutalist Design Standard ("Personality Without Aggression")**:
+    - When cards, containers, or scoreboard modules need distinctive character, employ **Neo-Brutalism**:
+      - Master cards: High-contrast solid `#FFFFFF` cards on a warm studio paper desk background (`#F4F0E8` / `#F5F2EB`) with subtle architectural grid lines (`48px 48px`).
+      - Bold borders: Crisp `3px` to `3.5px solid #0F172A` (or pure black).
+      - Hard tactile drop shadows: `6px 6px 0px #0F172A`, `8px 8px 0px #0F172A`, or `10px 10px 0px #0F172A`. **NEVER use blurry, muddy CSS box-shadows or diffuse gradients.**
+      - Refined corner rounding: `borderRadius: 6px` to `8px` (clean, contemporary neo-brutalism, never jagged or 90s web 1.0).
+      - Solid color brutalist tags: Solid accent blocks (cobalt `#2563EB`, amber `#D97706`, emerald `#059669`, crimson `#DC2626`) with `2px solid #0F172A` borders and hard shadows.
+
+18. **Editorial Comparison Geometry: Compact Height & Edge-Aligned Framing (Zero Dead White Space)**:
+    - **Compact Card Sizing**: Never stretch comparison cards to fill the full vertical screen height, which creates massive awkward white gaps in the middle. Constrain cards to a compact, well-proportioned height (`480px` – `500px`), centered vertically on the screen.
+    - **Edge-Aligned Product Framing**: Never center a floating cutout in an empty void while text is left-aligned. House hardware images inside dedicated brutalist display frames (`border: 2px solid #0F172A`, `borderRadius: 6px`, subtle `#F8FAFC` background) that span the full width of the card's inner margins, creating harmonious edge alignment with the content.
+    - **Docked Verdict Badges**: Dock verdict stamps/badges directly beneath the bullet specs with clean margins (`marginTop: 12px`), completely eliminating empty dead space.
+    - **Color-Coded Semantic Badges**: High-contrast tags (`#ECFDF5` emerald for positive, `#FFFBEB` amber for caution/baseline, `#FEF2F2` crimson for penalty/failure) with solid `2px` borders and hard brutalist shadows.
+
+19. **Chapter B-Roll Transitions: Canonical 6.0s Calibration, Retention Hooks, & `<OffthreadVideo>` Glitch Elimination**:
+    - **Strict Origin from Script**: Chapters MUST strictly follow the narrative chapters defined in the actual script (e.g. Chapter 01: *The Balcony Shading Trap*, Chapter 02: *The Bedroom Acoustic Reality*, etc.). Never invent generic corporate titles like "Prologue" or "The Paris Launch".
+    - **Duration**: Exactly **6.0 seconds (180 frames @ 30fps)** per chapter. Continuous master reel: **60.0 seconds (1,800 frames)**.
+    - **Zero Voiceover / Audio Timeline Chop**: Built specifically to be chopped during video editing. The narrator does not speak over the chapter card; it relies exclusively on frame-accurate acoustic Foley (`paper_slide.wav`, `click.wav`, `thud.wav`, `pop.wav`).
+    - **High-Tension Dopamine Curiosity Hook ("What to Watch For")**: Every chapter transition must contain a bold, provocative retention question in quotes (`“...”`) that creates an open loop and prevents viewer drop-off.
+    - **Glitch-Free Video Playback with `<OffthreadVideo>`**:
+      - **CRITICAL REMOTION DIRECTIVE**: NEVER use HTML5 `<Video>` for video footage with camera panning or horizontal scrolling! Chromium drops frames and stutters during headless seeks.
+      - **ALWAYS use `<OffthreadVideo>`** from `remotion`, which uses native FFmpeg to extract frames deterministically, ensuring 100% glitch-free horizontal scrolling and panning.
+      - Start from frame 0 (or constant keyframe offset), with no unnecessary looping.
+
+20. **Single-Pass Batch Bundling (Remotion High-Speed Rendering Law)**:
+    - When rendering multiple compositions (e.g. 10 chapters + 4 comparisons + master reels), **NEVER invoke `npx remotion render` in a loop from the CLI**, because each CLI invocation re-bundles the entire project and re-copies the massive public folder (~760MB), wasting 15–20 minutes.
+    - Instead, write a simple Node.js script using `@remotion/bundler` and `@remotion/renderer`:
+      - Bundle `src/index.ts` **ONCE** with `bundle()`.
+      - Sequentially select and render each composition using `selectComposition()` and `renderMedia()`.
+      - This renders all deliverables in under 2 minutes with zero redundant bundling overhead.
 
 ---
 

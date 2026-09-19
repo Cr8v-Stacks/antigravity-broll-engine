@@ -12,7 +12,7 @@
 | :--- | :--- | :--- | :--- |
 | `swoosh.wav` | Airy rush / clean pan | ~220ms | Card slide, panel push, camera sweep, scene transition |
 | `click.wav` | Crisp mechanical snap | ~35ms | Bullet points, spec rows, toggle switch, caliper triggers |
-| `pop.wav` | Soft bubble pill pop | ~45ms | Tags, pills, badge reveals, socket connection |
+| `pop.wav` | Tactile snap pop | ~45ms | Spec cards, bullet badges, criteria reveals, socket connection |
 | `thud.wav` | Authoritative punch | ~130ms | Crate landing, solid hardware lock, showdown arrival |
 | `stamp_slam.wav` | Heavy rubber stamp / thud | ~200ms | Audit stamp slam, verdict seal, warning banner punch |
 | `draw.wav` | Felt-tip marker friction | ~280ms | Highlighter sweep across text, laser scan line |

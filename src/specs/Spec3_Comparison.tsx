@@ -53,9 +53,6 @@ export const Spec3_Comparison: React.FC<Spec3Props> = () => {
           }}
         >
           <div style={{ transform: `scale(${s1Spring})`, display: "flex", flexDirection: "column", alignItems: "center" }}>
-            <div style={{ fontSize: 13, fontWeight: 800, color: "#16A34A", letterSpacing: "0.22em", textTransform: "uppercase", marginBottom: 12 }}>
-              THE NATURE OF SOFTWARE
-            </div>
             <h1 style={{ fontSize: 54, fontWeight: 900, color: "#0F172A", margin: "0 0 36px 0", letterSpacing: "-0.01em" }}>
               OVER-THE-AIR CODE PATCH
             </h1>
@@ -129,9 +126,6 @@ export const Spec3_Comparison: React.FC<Spec3Props> = () => {
           }}
         >
           <div style={{ transform: `scale(${s2Spring})`, display: "flex", flexDirection: "column", alignItems: "center" }}>
-            <div style={{ fontSize: 13, fontWeight: 800, color: "#DC2626", letterSpacing: "0.22em", textTransform: "uppercase", marginBottom: 12 }}>
-              THE REALITY OF HARDWARE
-            </div>
             <h1 style={{ fontSize: 54, fontWeight: 900, color: "#0F172A", margin: "0 0 36px 0", letterSpacing: "-0.01em" }}>
               FACTORY PHYSICAL RECALL
             </h1>
@@ -218,9 +212,6 @@ export const Spec3_Comparison: React.FC<Spec3Props> = () => {
           }}
         >
           <div style={{ transform: `scale(${s3Spring})`, display: "flex", flexDirection: "column", alignItems: "center" }}>
-            <div style={{ fontSize: 13, fontWeight: 800, color: "#2563EB", letterSpacing: "0.22em", textTransform: "uppercase", marginBottom: 12 }}>
-              THE CRITICAL DISTINCTION
-            </div>
             <h1 style={{ fontSize: 52, fontWeight: 900, color: "#0F172A", margin: "0 0 44px 0", letterSpacing: "-0.01em" }}>
               CODE VS PHYSICAL RECALL
             </h1>
