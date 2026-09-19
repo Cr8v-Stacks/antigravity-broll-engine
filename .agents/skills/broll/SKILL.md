@@ -184,7 +184,7 @@ Before presenting the spec options to the user:
    👉 **[Open Studio Spec Video Showcase](file:///C:/Users/user/.gemini/config/skills/broll/references/spec_video_showcase.md)**
    *(Note: This reference file contains the live carousel and embedded MP4 videos for all 8 specs with full playback controls).*
 2. **Call `ask_question` with `is_multi_select: true`**:
-  - **Question**: *"Which Spec Archetype(s) would you like to draw from as guidance addons?"*
+  - **Question**: *"Which Spec Archetype(s) would you like to draw from as guidance addons? (Review specs at: [Open Studio Spec Video Showcase](file:///C:/Users/user/.gemini/config/skills/broll/references/spec_video_showcase.md))"*
   - **Options**:
     - `(Recommended) Let the script dictate the specs`
     - `I trust your creative eye — Pick the best specs for this scene`
