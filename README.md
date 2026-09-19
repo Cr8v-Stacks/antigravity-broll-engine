@@ -6,15 +6,28 @@ Designed in the visual language of **Vox, Johnny Harris, Bloomberg, MKBHD, and C
 
 ---
 
+## 🏛️ The B-Roll Macro Architecture: 5 Production Tracks
+
+B-Roll is the comprehensive umbrella discipline for all visual storytelling footage that illustrates and paces a spoken video. This engine coordinates **5 distinct production tracks**:
+
+1. **Track 1: Modern Tech Motion Design (Specs 1–8)**: Premium dark-slate canvas (`#080B10`), dynamic telemetry, scoreboard multipliers, forum quote receipts, and multi-pillar audits. [100% Modular & Mixable]
+2. **Track 2: Swiss International Typographic Style**: Minimalist editorial elegance, rigid mathematical grid systems, heavy grotesque type (Helvetica, Inter), radical negative space, asymmetric tension. [100% Modular & Mixable]
+3. **Track 3: Vox & Johnny Harris Investigative Documentary**: Tactile paper dioramas, aged newsprint (`#F5F2EB`), halftone B&W cutouts with colored offset drops, detective corkboards with red yarn, classified manila folders, and generative video prompts via `vox-style`. [Strictly Isolated]
+4. **Track 4: Authentic OEM & Hardware Footage Ingestion**: 4K manufacturer launch footage, real balcony installation documentaries, and teardowns. Features the Premiere Pro subtitle crop (`115%–138%`, `translateY(-35px)`) and rapid spring punch-in. [Mixable]
+5. **Track 5: YouTube Shorts Viral Engine**: Automated vertical 9:16 (1080x1920) retention engine with hybrid 70% zoom framing, Andrew Edge TTS, and optical-center subtitles via `youtube-shorts-viral-engine`. [Format Isolated]
+
+---
+
 ## ✨ Key Features
 
 - **⚡ Instant `/broll` Slash Command**: Type `/broll` in Antigravity to launch the interactive onboarding flow.
-- **🎯 Click-and-Choose Guided Onboarding**: Never assumes your intent. Uses interactive pop-up modals (`ask_question`) so you can select visual style, typography, and specs with a single click—no typing required!
-- **🧩 8 Modular Spec Archetypes**: Pre-built TSX components for hardware specs, scoreboards, versus comparisons, telemetry gauges, forum quote receipts, kinetic statement hooks, comma lists, and forensic audits.
-- **🎨 Living Blueprints (Specs as Addons)**: Specs serve as creative guides rather than rigid molds. Each animation blends the archetype with what is creatively right for the narrative.
+- **🎯 Click-and-Choose Guided Onboarding**: Sequential 1-question-at-a-time modals (`ask_question`) guiding you through starting point, script input, asset sources, specs, and concept pitch.
+- **🧠 Mandatory Mindset Priming & Pre-Flight Quality Gate**: Prevents premature code generation and "AI slop". The engine pauses to digest your selection, verify negative constraints, and output a visible pre-flight blueprint before touching code.
+- **🧩 8 Modular Spec Archetypes**: Pre-built TSX components for hardware specs, scoreboards, versus comparisons, telemetry gauges, forum receipts, kinetic statement hooks, comma lists, and forensic audits.
+- **🎨 Living Blueprints (Specs as Addons)**: Specs serve as creative guides rather than rigid molds.
 - **🎧 Synchronous Acoustic Foley Library**: Includes `swoosh`, `click`, `pop`, `thud`, `stamp_slam`, `draw`, and `camera_click` sound effects synchronized to the exact frame.
-- **📁 Canonical Deliverable Naming & Tracking**: Renders all clips into `motion_clips/` following the `motion_<index>_<spoken_cue_slug>.mp4` convention with an automatic `broll_manifest.md` delivery log.
-- **🛡️ Anti-AI Slop Mandate**: Enforces progressive disclosure, lone words, vertical centering, and hero subject persistence—eliminating boring static slides.
+- **📁 Canonical Deliverable Naming & Tracking**: Strictly script-derived filenames (`<first_four_words>_(<sentence_words>).mp4`) with automatic `broll_manifest.md` delivery logging.
+- **🛡️ 15 Anti-AI Slop Commandments**: Enforces zero pill badges, hero opening punches, comma push physics, progressive disclosure, lone words, vertical centering, and hero subject persistence.
 
 ---
 
@@ -56,6 +69,8 @@ Antigravity will greet you with its capability briefing and display interactive 
 | **07** | **SequentialEmphasis** | Comma-separated list items & symptom lists | Item 1 enters center -> shifts left as Item 2 arrives -> locked showdown. |
 | **08** | **ForensicAudit** | Dense multi-pillar criteria & deep audits | Hero persistence glide -> 4-6 staggered criteria rows with clicks -> stamp slam. |
 
+*(Review all specs in action inside Antigravity: `references/spec_video_showcase.md`)*
+
 ---
 
 ## 📂 Project Structure
@@ -67,18 +82,20 @@ antigravity-broll-engine/
 │       └── broll/
 │           ├── SKILL.md                 # Complete Antigravity skill definition
 │           └── references/
+│               ├── spec_video_showcase.md # Live native GIF/MP4 carousel showcase
 │               ├── spec-catalog.md      # Detailed breakdown of Specs 1-8
 │               ├── foley-soundboard.md  # SFX timings and Remotion code
-│               └── anti-ai-slop.md      # Editorial design commandments
+│               └── anti-ai-slop.md      # 15 Editorial design commandments
 ├── public/
-│   └── sfx/                             # Frame-accurate Foley audio pack
-│       ├── swoosh.wav
-│       ├── click.wav
-│       ├── pop.wav
-│       ├── thud.wav
-│       ├── draw.wav
-│       ├── camera_click.wav
-│       └── stamp_slam.wav
+│   ├── sfx/                             # Frame-accurate Foley audio pack
+│   │   ├── swoosh.wav
+│   │   ├── click.wav
+│   │   ├── pop.wav
+│   │   ├── thud.wav
+│   │   ├── draw.wav
+│   │   ├── camera_click.wav
+│   │   └── stamp_slam.wav
+│   └── spec_previews/                   # Spec demo GIFs and MP4s
 ├── src/
 │   ├── Root.tsx                         # Master composition registry
 │   ├── index.ts                         # Remotion root entry
@@ -98,22 +115,6 @@ antigravity-broll-engine/
 
 ---
 
-## 🎬 CLI Rendering Commands
+## ⚖️ License & Credits
 
-For Windows PowerShell users:
-```powershell
-# Open Remotion Studio Preview
-cmd /c npx remotion preview
-
-# Render an individual Spec still frame for review
-cmd /c npx remotion still Spec1_ProductSpec preview_frames/spec1.png --frame=60
-
-# Render a canonical MP4 deliverable
-cmd /c npx remotion render Spec1_ProductSpec motion_clips/motion_01_hero_breakdown.mp4
-```
-
----
-
-## 📜 License
-
-MIT License. Feel free to use in your commercial and editorial video pipelines.
+Built for editorial creators, investigative journalists, and YouTube video essayists. Powered by [Remotion](https://www.remotion.dev/).
