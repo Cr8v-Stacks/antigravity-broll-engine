@@ -62,58 +62,83 @@ This skill powers the end-to-end transformation of YouTube video scripts into br
 
 ---
 
-## 2. Capabilities & Scope Briefing
+## 2. The Material-First Mandate & Strict Anti-Synthetic Drawing Law
 
-### What This Engine Does:
-- Converts specific script paragraphs, spoken claims, or thesis hooks into **individual, broadcast-grade B-roll clips** (typically 3.0s to 15.0s in length).
-- Implements spatial multi-scene staging, progressive disclosure, and kinetic typography.
-- Integrates frame-accurate **tactile acoustic Foley sound design** (`swoosh.wav`, `click.wav`, `pop.wav`, `thud.wav`, `draw.wav`, `stamp_slam.wav`).
-- Utilizes 8 canonical, reusable **Design Spec Archetypes** as modular building blocks.
-- Delivers clean, broadcast-ready H.264 MP4 deliverables directly into `motion_clips/`.
+> **🚨 TOP PRIORITY RULE: NEVER DRAW WHAT YOU CAN FETCH. ZERO SYNTHETIC SVGS FOR REAL SUBJECTS.**
+>
+> One of the most critical determinants of broadcast quality is knowing what materials are needed and proactively sourcing them. 
+> **THE CARDINAL SIN**: Attempting to draw real-world physical subjects (landmarks like the Eiffel Tower, hardware products like Bluetti/EcoFlow, components like solar panels, the sun, microinverters, batteries, vehicles, tools) using SVG code, CSS shapes, or geometric approximations.
+> Drawing synthetic code approximations wastes computational tokens and **instantly screams amateur, cheap clip-art output ("bad output")**.
 
-### What This Engine Does NOT Do (Important Scope Boundary):
-- It does **NOT** generate a full-length 15-minute video in one monolithic render.
-- Real documentary editing is modular: this engine crafts dedicated B-roll assets for **particular sections or paragraphs**, which are then assembled onto the master editing timeline (Premiere Pro, DaVinci Resolve, Final Cut).
+### The Material Strategy Decision Tree (Evaluate During Script Analysis):
+Before pitching concepts or writing code, analyze the script text and determine the optimal Material Strategy:
+
+```
+                               ┌─────────────────────────────────────────────────┐
+                               │     Named Physical Entities in Script Text      │
+                               │   (e.g., Eiffel Tower, Solar Panels, The Sun)   │
+                               └────────────────────────┬────────────────────────┘
+                                                        │
+                                      Evaluate Best Production Vehicle
+                                                        │
+             ┌──────────────────────────────────────────┼──────────────────────────────────────────┐
+             ▼                                          ▼                                          ▼
+     ┌───────────────┐                          ┌───────────────┐                          ┌───────────────┐
+     │    Path A     │                          │    Path B     │                          │    Path C     │
+     │  Mixed-Media  │                          │Authentic Live │                          │ Pure Kinetic  │
+     │ Photographic  │                          │ Video Footage │                          │  Typographic  │
+     │    Cutouts    │                          │ + Text Overlay│                          │  & Telemetry  │
+     └───────┬───────┘                          └───────┬───────┘                          └───────┬───────┘
+             │                                          │                                          │
+    • Isolated PNG cutouts                     • 1080p/4K OEM reel                        • For abstract claims
+    • Subject A + Subject B                    • Real balcony clips                       • Statistical punches
+    • Spring staging physics                   • Subtitle Crop 120%                       • Legal/cost thesis
+    • Leader lines & meters                    • Kinetic text overlay                     • Swiss typography
+```
+
+1. **Path A (Mixed-Media Photographic Cutouts + Spatial Staging)**:
+   - *When to use*: When multiple physical entities interact or technical specs are explained (e.g. the sun radiating energy onto a solar panel with live wattage telemetry).
+   - *Action*: Go online immediately, search and download authentic, high-resolution transparent PNG cutouts (e.g. `sun_cutout.png`, `solar_panel_cutout.png`), place them in `public/assets/`, and stage them with spring physics, leader lines, and dynamic telemetry.
+2. **Path B (Authentic Live Video Footage + Kinetic Typography Overlay)**:
+   - *When to use*: When the narrative describes real-world physical action, atmospheric motion, weather, or real installation scenes.
+   - *Action*: Sourcing authentic 1080p/4K video clips (from `Plug-in Renewables` or curated stock), applying the Premiere Pro Subtitle Crop (`scale(1.2-1.38)` and `translateY(-35px)`), and finishing the clip with clean overlaying motion typography.
+3. **Path C (Pure Typographic & Telemetry Motion)**:
+   - *When to use*: When the script makes an abstract claim, price comparison (£1,000+), legal contract dispute, or statistical statement with no single physical object.
+   - *Action*: Bold Swiss typography, massive stat slam, and dynamic telemetry curves.
+
+### 🔍 Mandatory Pre-Flight Asset Harvest Protocol:
+The agent **MUST NOT wait until code writing to discover missing assets**. It must execute this harvest beforehand:
+1. **Audit Local Storage First**: Check local project folders (`public/`, `official_web/`, `Plug-in Renewables/`, `product_images/<brand>/`) for matching cutouts or 4K videos.
+2. **Active Web Harvesting**: If not found locally, immediately query the web:
+   - Scrape manufacturer product portals (e.g. `bluettipower.eu`, `ecoflow.com`), brand press kits, and certified EU trade publications (`ess-news.com`, `pv-magazine.com`).
+   - Search for transparent PNG cutouts (`site:pngwing.com <subject> transparent png` or official press renders).
+   - If only solid-background photos exist: Download the highest-resolution official photograph and frame it as an authoritative editorial card with subtle studio drop shadow—**NEVER resort to drawing an SVG cartoon**.
+3. **Download Directly to `public/`**: Save all downloaded cutouts, videos, or receipts into `public/assets/` or `public/product_images/<brand>/` *before* generating compositions!
 
 ---
 
-## 3. The Golden Philosophy: Specs are Addons, Not Rigid Molds
+## 3. Spec Archetypes as Living Choreography Mindsets (NOT Rigid Templates, NEVER Discarded)
 
 > **THE SPEC GUIDANCE PRINCIPLE**:
-> The 8 canonical specs are **living blueprints and modular addons, NOT rigid templates.**
-> A generated B-roll must be a creative, organic mixture of the chosen spec archetype and whatever is creatively correct for that specific script sentence. 
-> Never force an entire paragraph into an ill-fitting cookie-cutter box. If the narrative evolves from a hardware introduction into an owner complaint, the visual must glide seamlessly from Spec 1 (`ProductSpec`) into Spec 5 (`QuoteReceipt`) using **Hero Subject Persistence** and **Spatial Staging**.
+> When a user says: `"(Recommended) Let the script dictate the specs"` or `"I trust your creative eye"`, **THIS DOES NOT MEAN DISCARDING THE SPECS!**
+> The specs are **Spatial Choreography Mindsets**—the architectural staging patterns developed by world-class documentary motion designers. 
+> The agent must select the best spec mindset for the script section, adapt its spatial physics, and explain why.
+
+### The 8 Spec Choreography Mindsets:
+| Spec | Choreography Mindset | Spatial Physics & Staging Rule | Example Script Application |
+| :---: | :--- | :--- | :--- |
+| **01** | **Hero Arrival & Stage Split** | Subject lands dead-center, establishes authority, then glides right (or moves up) to open negative space for companion data/leader lines. | Introducing a new solar generator, inverter, or architectural landmark. |
+| **02** | **Weighted Multiplier & Progress Fill** | Multiplier badge (`WEIGHT: x2`), horizontal progress bars filling sequentially to an authoritative score grade. | Benchmarking battery efficiency, durability scores, or warranty ratings. |
+| **03** | **Versus Tension & Split Showdown** | 50/50 stage split with glowing neon vertical seam, pitting competing entities in a locked showdown. | Comparing Hardware vs Software, OTA Patch vs Physical Recall, Brand A vs Brand B. |
+| **04** | **Live Telemetry & Measurement** | Dynamic needle sweep, thermal heat maps, live decibel VU meters, or solar wattage curves with alert zones. | Sound levels (dB), heat degradation (°C), solar input wattage dropping to 0W at sunset. |
+| **05** | **Factual Evidence & Forum Receipt** | Dark-mode forum post card (Reddit, forums, lab PDFs) with a sweeping felt-tip highlighter behind permanent text. | Citing customer complaints, forum receipts, firmware bugs, or lab test findings. |
+| **06** | **Lone Word Hook & Stat Slam** | Isolated temporal hook lands alone (`IN LATE 2023`), followed by a massive 2.4× stat slam (`€3,500`) with physical Foley thud. | Provocative thesis hooks, turning points, or financial shocks. |
+| **07** | **Sequential Push & Displace** | Item 1 enters center; when Item 2 enters center, Item 1 physically pushes left (`-440px`) to make room. When Item 3 enters, it takes the right (`+440px`). | Comma-separated lists of hardware, features, or failure symptoms. |
+| **08** | **Forensic Audit & Rubber Stamp** | Dense multi-pillar criteria rows checked off with mechanical clicks, sealed with an authoritative physical rubber stamp. | Deep audits, legal verdicts, safety compliance checks, final review verdict. |
 
 ---
 
-## 4. The 4 Fundamental User-Experience Commandments
-
-1. **Sequential Questioning (One Step at a Time)**:
-   - **NEVER dump a wall of questions in a single turn.**
-   - Follow the creator's natural thought process:
-     1. Starting Point (What do you have right now?)
-     2. Script Content (Which line or paragraph are we bringing to life?)
-     3. Media & Assets (Where are the visuals coming from?)
-     4. Visual Spec Archetype (What starting visual blueprint fits best?)
-     5. Concept Pitch (2–3 director concepts to choose from).
-2. **Always Provide "I Trust You / Make the Best Creative Decision"**:
-   - For every styling, media, or spec question, ALWAYS include an option:
-     `"(Recommended) I trust your creative eye — Choose the best direction for this script"`.
-   - Never block a creator who just wants great results without having to make technical design choices.
-3. **Media Agility (Don't Force Pure Vector Motion)**:
-   - Real documentaries blend vector graphics with authentic imagery and video clips:
-     - Pure Motion Graphics (vector typography, animated meters, studio canvas)
-     - Mixed Media (motion graphics + authentic product photos & receipts)
-     - Local Drive Assets (OEM 4K clips, teardowns, hardware cutouts)
-     - Stock Footage Sourcing (Pexels, Pixabay, Mixkit)
-     - Web Evidence Receipts (Reddit cards, lab graphs, forum posts)
-4. **In-App Visual Spec Showcase**:
-   - Creators cannot visualize abstract spec numbers in their heads.
-   - Present the in-app video showcase reference (`spec_video_showcase.md`) so the user can see, watch, and understand what each spec looks like before choosing.
-
----
-
-## 5. The Creator's Natural Onboarding Sequence (`ask_question` Tree)
+## 4. The Creator's Natural Onboarding Sequence (`ask_question` Tree)
 
 When `/broll` is invoked or a new B-roll task begins, ask **only ONE question at a time** in this exact natural order:
 
@@ -138,7 +163,7 @@ Call `ask_question`:
 
 ---
 
-### Step 3: Media Sourcing & Asset Direction (Multi-Select Enabled)
+### Step 3: Material Sourcing & Asset Direction (Multi-Select Enabled)
 Once the script line is provided, call `ask_question` with `is_multi_select: true`:
 - **Question**: *"Where should we source the visuals and assets for this B-roll?"*
 - **Options**:
@@ -149,14 +174,6 @@ Once the script line is provided, call `ask_question` with `is_multi_select: tru
   - `Stock Video Sourcing: Find high-quality relevant stock footage (Pexels, Mixkit)`
   - `Pure Motion Graphics: Vector typography, telemetry meters, and studio backdrops`
   - `I trust you — Make the best creative decision based on the script`
-
-#### 🔍 Behind-the-Scenes Asset Sourcing Protocol:
-When the user selects an asset source or trusts the engine, **the agent must NEVER rely solely on low-res video freeze-frames when primary web assets exist**:
-1. **Product Hardware & Cutouts**: Automatically crawl/scrape manufacturer product pages (e.g. `bluettipower.eu`, `ecoflow.com`), brand press portals, certified EU retailers (e.g. Decathlon, Offgridtec), and clean energy trade publications (`ess-news.com`, `pv-magazine.com`). Download high-res product photos, isolated transparent PNGs, and exploded internal CAD schematics directly into `public/product_images/<brand>/web_assets/` or `official_web/`.
-2. **Editorial News & Event Photography**: Search press release wire services (PR Newswire, BusinessWire) and editorial photo archives for verified launch event photography (e.g. Eiffel Tower 1st-floor launch event photos).
-3. **Community Evidence & Receipts**: Query authentic community forums (Reddit `r/SolarDIY`, German `Photovoltaikforum`, official manufacturer support threads) and independent lab test reports.
-4. **Stock Context Footage**: Search Pexels, Pixabay, or Mixkit for contextually relevant live-action footage (must strictly match the script topic—zero generic filler).
-5. **Artisan Studio Textures**: Use high-resolution craft paper textures (`public/textures/`) or generate bespoke tactile backdrops using the Gemini Image model.
 
 ---
 
@@ -186,17 +203,18 @@ Before presenting the spec options to the user:
 ### Step 5: The 3-Concept Pitch (Dynamic Script Synthesis — Zero Canned Concepts)
 Before writing any code, the agent MUST analyze the user's provided script text dynamically:
 1. **Narration Timing Math**: Word count ÷ ~2.25 words/sec = estimated seconds and frames @ 30fps.
-2. **Core Emotional Stakes & Conflict**: What is the narrator proving, challenging, revealing, or debunking?
-3. **Synthesize 3 Distinct Creative Concepts** specifically tailored to those exact spoken words:
+2. **Material Evaluation**: Declare the Material Strategy (Path A Cutouts, Path B Video, or Path C Typography) and state required assets.
+3. **Spec Mindset Declaration**: Explicitly state which Spec Choreography Mindset(s) are adopted and why.
+4. **Synthesize 3 Distinct Creative Concepts** specifically tailored to those exact spoken words:
    - **Concept A (Keynote / Swiss Minimalist)**: Focus on high-contrast typography, lone words, clean whitespace, subtle radiant accent lines, and authoritative hardware cutouts.
    - **Concept B (Technical Telemetry & Evidence)**: Focus on animated decibel/thermal gauges, exploded CAD dimensions, scoreboard multipliers, and verified forum receipts.
    - **Concept C (Kinetic Narrative Staged Reveal)**: Dynamic push-pull multi-scene choreography, sequential symptom locks, lone action words, and hero subject persistence across scene boundaries.
    *(Special Case: If the creator explicitly requested the Vox documentary aesthetic, the 3 concepts instead draw from the 3 locked Vox house styles: Newsroom Collage, Mixed-Media Paper, or 3D Paper Diorama via `vox-style`).*
-4. **Interactive Modal Call**: Present the 3 concepts dynamically via `ask_question` with a 1-sentence breakdown of each concept's visual progression so the user can click their favorite.
+5. **Interactive Modal Call**: Present the 3 concepts dynamically via `ask_question` with a 1-sentence breakdown of each concept's visual progression so the user can click their favorite.
 
 ---
 
-## 6. The Mandatory Skill & Resource Digest Protocol (The Anti-Rush Quality Gate)
+## 5. The Mandatory Skill & Resource Digest Protocol (Step 6 Quality Gate)
 
 > **🚨 ABSOLUTE WORKFLOW LAW: NEVER JUMP INTO WORK BEFORE DIGESTING THE ENTIRE SKILL SET & RESOURCES.**
 > 
@@ -207,11 +225,11 @@ Before writing any code, the agent MUST analyze the user's provided script text 
 > The agent is **STRICTLY FORBIDDEN** from writing `.tsx` files, creating compositions, or executing render commands immediately upon receiving user feedback.
 >
 > Instead, the agent **MUST** explicitly pause, go back into the base skill, and **re-read and digest the entire skill set and all its accompanying reference resources**:
-> 1. **The Entire Base Skill (`SKILL.md`)**: Re-absorb the macro architecture, all 5 production tracks, the mixability vs. isolation laws, the living blueprint philosophy, deliverable naming laws, and execution commands.
-> 2. **The Complete Design Spec Catalog (`references/spec-catalog.md`)**: Review the visual progression, structural layouts, and component mechanics of the relevant specs.
+> 1. **The Entire Base Skill (`SKILL.md`)**: Re-absorb the macro architecture, all 5 production tracks, the material-first mandate, mixability laws, deliverable naming laws, and execution commands.
+> 2. **The Complete Design Spec Catalog (`references/spec-catalog.md`)**: Review visual progression, layout hierarchy, and component mechanics of the selected specs.
 > 3. **The Foley Soundboard (`references/foley-soundboard.md`)**: Review all 11 acoustic sound assets in `public/sfx/`, decibel gains, and frame-accurate synchronization formulas.
 > 4. **The Complete Anti-AI Slop Commandments (`references/anti-ai-slop.md`)**: Re-absorb all 15 editorial commandments, negative constraints, banned patterns, and dynamic spatial physics.
-> 5. **Available Project Assets & Media**: Inspect available local cutouts, web assets, and audio files.
+> 5. **Asset & Media Verification**: Confirm that authentic cutouts/videos are downloaded into `public/` (ZERO synthetic SVGs).
 >
 > **THE VISIBLE USER CONFIRMATION**:
 > The agent **MUST let the user know explicitly** that it is going through the base skill set and all available resources to fully understand them and get itself in the exact mindset needed for the generation. It must output this visible **`🧠 Creative Director Mindset & Complete Skill Digest Blueprint`** directly into the chat:
@@ -222,36 +240,42 @@ Before writing any code, the agent MUST analyze the user's provided script text 
 ### 🧠 Creative Director Mindset & Complete Skill Digest Blueprint
 
 #### 1. Comprehensive Skill & Resource Review (Full Base Digest)
-- [x] **Base Engine (`SKILL.md`)**: Re-read and digested complete macro architecture, the 5 production tracks, mixability rules, and execution laws.
+- [x] **Base Engine (`SKILL.md`)**: Re-read and digested complete macro architecture, material-first mandate, and execution laws.
 - [x] **Spec Catalog (`references/spec-catalog.md`)**: Reviewed layout mechanics and visual progression for chosen spec addons.
 - [x] **Acoustic Foley (`references/foley-soundboard.md` & `public/sfx/`)**: Loaded sound assets, frame offsets, and acoustic mix rules.
 - [x] **Anti-AI Slop & Editorial Laws (`references/anti-ai-slop.md`)**: Re-absorbed all 15 non-negotiable commandments and negative constraints.
-- [x] **Asset & Project Context**: Audited available image cutouts, video clips, and texture layers.
+- [x] **Asset & Media Verification**: Confirmed authentic photographic cutouts/videos are downloaded into `public/` (ZERO synthetic SVGs).
 
-#### 2. Selected Production Track & Aesthetic Direction
-- **Production Track**: [Track 1: Modern Tech Motion / Track 2: Swiss Typographic / Track 3: Vox Documentary / Track 4: OEM Ingestion / Track 5: Viral Shorts]
-- **Aesthetic Tone & Philosophy**: [1–2 sentences capturing the visual language, contrast, and spatial behavior]
-- **Modular Spec Addons**: [e.g. Spec 1 (ProductSpec) + Spec 7 (SequentialEmphasis) hybrid]
+#### 2. Material Strategy & Sourced Assets
+- **Material Path**: [Path A: Mixed-Media Cutouts / Path B: Live Video Reel / Path C: Pure Typography]
+- **Sourced Assets**:
+  - `public/assets/<entity_1>.png` (Authentic photographic cutout)
+  - `public/assets/<entity_2>.png` (Authentic photographic cutout)
+- **Anti-Synthetic Verification**: Confirmed NO code-drawn SVGs or CSS approximations are used.
 
-#### 3. Negative Constraints & Anti-AI Slop Checklist (Active Ban List)
+#### 3. Selected Spec Choreography Mindset
+- **Active Spec Mindset**: [e.g. Spec 1 (Hero Arrival & Stage Split) + Spec 7 (Sequential Push) hybrid]
+- **Choreography Rationale**: [Explain why this spatial staging matches the spoken vocal beats]
+
+#### 4. Negative Constraints & Anti-AI Slop Checklist (Active Ban List)
+- [x] **Zero Synthetic SVGs for Real Subjects**: 100% authentic photographic cutouts and verified hardware.
 - [x] **Zero Eyebrow / Zero Pill Badge Law**: ABSOLUTELY NO uppercase category tags, pill boxes, or `[ HURDLE 01 ]` marketing bloat.
 - [x] **Zero Frame-0 Full Canvas Trap**: The canvas opens clean/empty; elements arrive word-by-word with the speaker's vocal cues.
 - [x] **Zero Simultaneous Card Dumps**: Elements push and displace each other dynamically using spatial physics.
-- [x] **Zero Synthetic SVGs for Real Hardware**: 100% authentic photographic cutouts and verified hardware.
 - [x] **Zero Generic Stock Filler**: Every asset directly depicts the exact hardware or claim cited.
 - [x] **Strict Vertical Centering**: All content perfectly centered on Y-axis (`top: 50%`, `transform: translateY(-50%)`).
 
-#### 4. Spoken Narration Timing Math & Cadence
+#### 5. Spoken Narration Timing Math & Cadence
 - **Spoken Voiceover Text**: "[Quote the exact spoken words being visualized]"
 - **Cadence Calculation**: [X] words ÷ 2.25 words/sec = ~[Y.Y] seconds = **[Z] frames @ 30fps**.
 
-#### 5. Synchronous Acoustic Foley Allocation
+#### 6. Synchronous Acoustic Foley Allocation
 - **Frame [F1]**: `thud.wav` (Hero temporal / lone word slam)
 - **Frame [F2]**: `swoosh.wav` (Item 1 spatial push-left displacement)
 - **Frame [F3]**: `click.wav` (Item 2 entrance / telemetry meter power-up)
 - **Frame [F4]**: `stamp_slam.wav` (Verdict stamp / Stat slam down)
 
-#### 6. Beat-by-Beat Spatial Choreography Map
+#### 7. Beat-by-Beat Spatial Choreography Map
 | Beat / Frame Range | Spoken Vocal Cue | Visual Staging & Spatial Movement | Synchronized SFX Cue |
 | :--- | :--- | :--- | :--- |
 | Beat 1 (0–30f) | "In late 2023..." | Lone hero hook lands dead-center; screen otherwise empty | `thud.wav` (Frame 4) |
@@ -266,54 +290,88 @@ Only **AFTER** conducting this full review and presenting this visible digest to
 
 ---
 
-## 7. The 5 Visual Production Tracks (Mixability vs. Isolation Laws)
+## 6. Edge Cases & Nuance Resolution Guide
 
-Our B-Roll engine encompasses **5 specialized production tracks**, governed by a strict rule of **Mixability vs. Isolation**:
+### Edge Case A: Full Script Scouting vs. Single Batch Paragraph
+- **When Given a Full Script**:
+  1. Do NOT immediately code. Scout candidate moments across the whole script.
+  2. For each candidate moment, classify its **Material Strategy** (Path A Cutouts, Path B Video, Path C Typography) and **Spec Mindset**.
+  3. Batch-harvest assets (scrape product cutouts, download press images) for all approved scenes at once into `public/assets/`.
+- **When Given a Single Batch Paragraph**:
+  1. Perform immediate Named Entity Extraction (e.g. *Eiffel Tower*, *Solar Panels*, *The Sun*, *EcoFlow Stream*).
+  2. Check local folders -> Web search / crawl manufacturer -> Download transparent cutouts into `public/` *before* concept pitching.
 
-### Track 1: Modern Motion Design & Modular Specs (Specs 1–8) [HIGHLY MIXABLE]
-- **Core Domain**: The foundational visual engine of `broll`. Clean Keynote studio, Swiss-editorial typography, dark slate (`#080B10`) or crisp studio paper backdrops, sleek telemetry meters, forum receipts, and modular scoreboards.
-- **Mixability Rule**: **100% Modular & Mixable**. You can fluidly transition between specs within a single scene: e.g., open on Spec 6 (lone word punch) -> glide into Spec 1 (hardware CAD cutout) -> receive Spec 4 (live telemetry meter) using **Hero Subject Persistence** and **Spatial Staging**.
-- **Execution**: Built deterministically in Remotion and rendered directly to `motion_clips/`.
+### Edge Case B: Subject Without a Transparent Background Available
+- If web queries for transparent PNGs fail, download the highest-resolution official photograph.
+- **NEVER fallback to drawing an SVG caricature.**
+- Instead:
+  - Isolate the subject using rembg/canvas tools if available, OR
+  - Frame the photo as an authoritative, high-contrast editorial card with a clean dark-mode bezel, subtle drop shadow, and crisp caption.
 
-### Track 2: Swiss International Typographic Style [HIGHLY MIXABLE]
-- **Core Domain**: Minimalist editorial elegance. Rigid grid systems, heavy grotesque type (Helvetica, Inter), radical negative space, asymmetric tension, monochrome dark-slate canvas with one bold spot color.
-- **Mixability Rule**: Fluidly mixable with Track 1 and Track 4.
-- **Execution**: Built deterministically in Remotion using minimal typography-first spec layouts.
+### Edge Case C: Multiple Real Entities in One Sentence
+- Example: *"Solar panels harvesting energy from the blazing summer sun."*
+- **Decision Matrix**:
+  - If the narration focuses on technical mechanics or wattage: Choose **Path A (Mixed Media Cutouts)**. Harvest `sun_cutout.png` and `solar_panel_cutout.png`, position them spatially, and draw animated energy waves/telemetry between them.
+  - If the narration focuses on real-world atmosphere or lifestyle installation: Choose **Path B (Live Video Footage)**. Find an authentic 4K clip of solar panels soaking up sunlight, crop cleanly (`scale(1.25)`), and overlay kinetic telemetry stats.
 
-### Track 3: The Vox-Style Explainer System (`vox-style`) [STRICTLY ISOLATED]
-- **Core Domain**: Dedicated archival investigative documentary aesthetic (Vox, Johnny Harris, European investigative journalism).
-- **Skill Engine**: Handled by [`vox-style`](C:\Users\user\.gemini\config\skills\vox-style\SKILL.md).
-- **Isolation Rule**: **STRICTLY ISOLATED**. Vox has its own locked visual world (aged newsprint `#F5F2EB`, halftone dot screens, rough white keylines, ink stamps, paper tears). **NEVER mix modern glossy Keynote cards, neon HUDs, or Swiss-modern elements into a Vox scene.**
-- **The 6 Locked House Styles & Documentary Directions**:
-  1. *Newsroom Collage (Default)*: Aged newsprint, halftone B&W cutouts with offset red strokes, giant stat numbers treated as physical characters.
-  2. *Mixed-Media Paper*: Bold primary color blocks, archival cutouts, black marker circles, geometric drafting tape.
-  3. *3D Paper Diorama*: Heavy craft paper, deep depth-of-field, sepia layers, letterpress props.
-  4. *Detective Casefile (Murder Board)*: Dark corkboard, red yarn connecting pushpins between suspect products and lab proof, manila evidence folders with `[CLASSIFIED]` stamps, typewriter text, fingerprint smudges.
-  5. *Polaroid Forensic Snapshot*: Authentic Polaroid frames with wide chins, handwritten Sharpie notes, chemical developing emulsion bloom, scotch tape, paperclips pinning field receipts. Ideal for high-stakes scene openers and test bench reveals.
-  6. *Tactical Cartography (Johnny Harris Map)*: Tilted 3D topographic & architectural contour blueprints, animated red route trajectories, glowing GPS pins, coordinate crosshairs, torn paper revealing satellite terrain.
-- **Dual Execution Pathways**:
-  - *Generative Video Prompts (Google Flow / Omni Flash 1.1)*: Structured 5-line prompts (`STYLE REFERENCE`, `SCENE`, `MOTION`, `AUDIO`, `NEGATIVE`) with 3 physical depths (BG/MG/FG) and diegetic Foley sound design (NO voiceover, NO music).
-  - *Deterministic Remotion Engine*: Code-based rendering using `Halftone`, `TearReveal`, `AlertWash`, and `VoxStamp`.
+### Edge Case D: Interpreting "Let Script Dictate / I Trust Your Creative Eye"
+- Choosing "I trust you" NEVER means abandoning specs.
+- The AI must explicitly declare in its Concept Pitch:
+  *"Adopting Spec Mindset 1 (Hero Arrival & Stage Split) because the script introduces a flagship hardware hero before breaking down internal inverter components."*
 
-### Track 4: OEM Video & Real-World B-Roll Ingestion (`Plug-in Renewables`) [HIGHLY MIXABLE]
-- **Asset Library**: [`C:\Users\user\Downloads\Plug-in Renewables\`](file:///C:/Users/user/Downloads/Plug-in%20Renewables/)
-- **Scope**: Ingesting pristine 1080p and 4K official manufacturer footage, real balcony installation documentaries, and teardowns.
-- **The 3 Non-Negotiable Operating Rules**:
-  1. *Collision Avoidance*: Never place motion graphics or telemetry over baked-in specs or manufacturer titles. Position graphics strictly in clean negative space.
-  2. *The Premiere Pro Subtitle Crop*: Scale up 115%–138% and push `translateY(-35px)` to crop out foreign review subtitles, captions, or watermarks.
-  3. *Rapid Spring Punch-In*: Expand from a focal card to full bleed within 8–15 frames using a snappy spring.
+---
 
-### Track 5: YouTube Shorts Viral Engine (`youtube-shorts-viral-engine`) [FORMAT ISOLATED]
-- **Core Domain**: Automated vertical 9:16 (1080x1920) production pipeline.
-- **Skill Engine**: Handled by [`youtube-shorts-viral-engine`](C:\Users\user\.gemini\config\skills\youtube-shorts-viral-engine\SKILL.md).
-- **Features**: Hybrid 70% zoom framing, Microsoft Edge TTS Andrew neural voiceover, optical-center kinetic subtitles, anti-watermark asset curation, and immediate product hook architecture.
+## 7. Core Motion Design Commandments (The 15 Anti-AI Slop Laws)
 
-### Execution Frameworks Role Clarification
-| Tool / Framework | Role in the Pipeline |
-| :--- | :--- |
-| **Remotion** | **Code-Based Video Compositor & Sequencer**: The engine where Modern Motion Design (Specs 1–8), imported OEM videos, and synchronous acoustic Foley (`.wav`) are coded, layered, animated, and rendered into deliverable MP4s. |
-| **Google Flow / Omni Flash 1.1** | **Generative AI Diffusion Video**: Creates organic camera moves and physical video clips for Track 3 (Vox) where hand-coded motion graphics would look sterile. |
-| **Premiere Pro / DaVinci Resolve** | **Master NLE Editing Timeline**: The master timeline where the 15-minute voiceover is cut with the individual modular B-rolls from `motion_clips/`. |
+1. **The Anti-Synthetic Drawing Mandate (CRITICAL LAW #1)**:
+   - If an entity exists in the physical world (Eiffel Tower, solar panels, the sun, inverters, batteries, vehicles, tools), **NEVER draw it using SVG code or CSS shapes**. Sourcing authentic photographic cutouts or videos is mandatory.
+
+2. **The Zero Eyebrow / Zero Pill Badge / Zero Bloat Law (CRITICAL LAW #2)**:
+   - **ABSOLUTELY NO EYEBROWS, NO PILL BADGES, AND NO CATEGORY TAGS.**
+   - Never add decorative uppercase pill boxes or labels above cards (e.g. `[ THE MODULAR GENERATION ]`, `[ COMPONENT 1 ]`, `[ HURDLE 01 ]`, `[ ARCHITECTURAL REDESIGN ]`). Broadcast-grade motion graphics rely on clean, authoritative typography, authentic cutouts, and pure space.
+
+3. **The Hero Opening Punch Rule**:
+   - Opening punch words (temporal hooks like `IN LATE 2023`, critical years, locations, or core thesis words) MUST land on screen **ALONE first** as an isolated hero element, accompanied by an authoritative acoustic hit (`thud.wav`). Explanatory companion clauses animate in alongside or below only **AFTER** the hero punch has established the scene.
+
+4. **Comma-Separated Grow & Push Choreography (Dynamic Spatial Physics)**:
+   - When a sentence lists multiple entities or hardware separated by commas:
+     - **Item 1** enters dead-center and grows into focus.
+     - When **Item 2** enters dead-center, Item 1 physically pushes left (`-440px` to `-480px`) to make room.
+     - When **Item 3** enters, it takes the right (`+440px` to `+480px`), locking a balanced 3-part layout.
+     - **NEVER** dump them as a static 3-column card grid at once. The screen is a living stage where new arrivals physically push and displace existing elements.
+
+5. **Massive Stat Slam (Scale 2.4× down to 1.0×)**:
+   - Financial figures, prices (`€3,500`), wattage limits (`800W`), or critical numbers must slam down from 2.4× scale with a physical `stamp_slam.wav` or `thud.wav`, claiming the full screen rather than sitting in a polite little badge.
+
+6. **Dynamic Telemetry, Authentic Footage & Distressed Stamps vs Dry Text Cards**:
+   - Never chain 3 consecutive text cards together for hurdles or pain points. Mix in authentic OEM footage, dynamic UI simulations (e.g. live solar dropping from 800W to 0W with flashing red alert and `alert_beep.wav`), and distressed rubber stamp overlays.
+
+7. **The Full Canvas Trap & Unresolved Tension**:
+   - Never open a scene at frame 0 with pre-assembled layouts. Elements arrive word-by-word with spoken audio.
+
+8. **The Atomic Staggering Law**:
+   - If you have things you can animate separately, NEVER animate them together. Every distinct product, metric, or clause gets its own isolated entrance and Foley punch.
+
+9. **The Lone Words Rule**:
+   - Action words, model names (`Hyper 2000`), and dates must exist alone on screen with zero clutter or borders.
+
+10. **Strict Vertical Centering & Balanced Negative Space**:
+    - All content must be centered vertically (`top: 50%`, `transform: translateY(-50%)`).
+
+11. **Hero Subject Persistence & Fluid Spatial Staging**:
+    - Treat the canvas as a continuous physical stage where persisting subjects glide to dead-center stage instead of abruptly cutting to black.
+
+12. **Permanent Text Visibility (The Highlighter Rule)**:
+    - Never let text disappear, flicker, or turn black-on-black when a highlighter sweeps across it. The highlighter sweeps behind permanent high-contrast text.
+
+13. **Zero Irrelevant Stock Footage Rule**:
+    - Never use generic filler videos (spinning fans, random wind turbines, unrelated drone cityscapes) just to fill time. Every asset must directly depict the exact brand, mechanism, or evidence cited in the voiceover.
+
+14. **The Premiere Pro Subtitle Crop**:
+    - Crop out lower-third subtitles by scaling `115%–138%` and shifting `translateY(-35px)`.
+
+15. **The Deep Asset Harvest Mandate (Script-Proportional Scope)**:
+    - For long-form teardowns, comparisons, and product reviews, systematically collect heroes, exploded internals, rear I/O, accessories, lifestyle installations, competitor benchmarks, predecessor hardware, and editorial launch event photos into `product_images/<brand>/`.
 
 ---
 
@@ -359,58 +417,14 @@ Always purge temporary PNG stills from `preview_frames/` or `out/` after verific
 
 ---
 
-## 9. Core Motion Design Commandments (The 15 Anti-AI Slop Laws)
-
-1. **The Zero Eyebrow / Zero Pill Badge / Zero Bloat Law (CRITICAL)**:
-   - **ABSOLUTELY NO EYEBROWS, NO PILL BADGES, AND NO CATEGORY TAGS.**
-   - Never add decorative uppercase pill boxes or labels above cards (e.g. `[ THE MODULAR GENERATION ]`, `[ COMPONENT 1 ]`, `[ HURDLE 01 ]`, `[ ARCHITECTURAL REDESIGN ]`).
-   - Pill tags and eyebrows are web/marketing bloat that scream amateur PowerPoint design. Broadcast-grade motion graphics (Vox, Bloomberg, MKBHD) rely on clean, authoritative typography, authentic cutouts, and pure space.
-
-2. **The Hero Opening Punch Rule**:
-   - Opening punch words (temporal hooks like `IN LATE 2023`, critical years, locations, or core thesis words) MUST land on screen **ALONE first** as an isolated hero element, accompanied by an authoritative acoustic hit (`thud.wav`).
-   - Explanatory companion clauses (e.g. *"Bluetti debuted their modular kit—"*) animate in alongside or below only **AFTER** the hero punch has established the scene. Never group them into a single simultaneous text block.
-
-3. **Comma-Separated Grow & Push Choreography (Dynamic Spatial Physics)**:
-   - When a sentence lists multiple entities or hardware separated by commas (e.g. *"the A80 microinverter, D100S controller, and B210 battery"*):
-     - **Item 1** enters dead-center and grows into focus.
-     - When **Item 2** enters dead-center, Item 1 physically pushes left (`-440px` to `-480px`) to make room.
-     - When **Item 3** enters, it takes the right (`+440px` to `+480px`), locking a balanced 3-part layout.
-     - **NEVER** dump them as a static 3-column card grid at once. The screen is a living stage where new arrivals physically push and displace existing elements.
-
-4. **Massive Stat Slam (Scale 2.4× down to 1.0×)**:
-   - Financial figures, prices (`€3,500`), wattage limits (`800W`), or critical numbers must slam down from 2.4× scale with a physical `stamp_slam.wav` or `thud.wav`, claiming the full screen rather than sitting in a polite little badge.
-
-5. **Dynamic Telemetry, Authentic Footage & Distressed Stamps vs Dry Text Cards**:
-   - Never chain 3 consecutive text cards together for hurdles or pain points. That turns the video into a boring slide deck.
-   - Mix in:
-     - Authentic OEM footage with the Premiere Pro subtitle crop (`scale(1.2-1.38)` and `translateY(-35px)`).
-     - Dynamic UI simulations (e.g. live solar dropping from 800W to 0W at sunset with flashing red alert and `alert_beep.wav`).
-     - Distressed rubber stamp overlays (e.g. `FAILED TO UNTANGLE`) with tactile `stamp_slam.wav`.
-
-6. **The Full Canvas Trap**: Never open a scene at frame 0 with pre-assembled layouts. Elements arrive word-by-word with spoken audio.
-7. **The Atomic Staggering Law**: Never animate separable elements together. Every product, metric, or clause gets its own isolated entrance and Foley punch.
-8. **The Lone Words Rule**: Action words, model names (`Hyper 2000`), and dates must exist alone on screen with zero clutter or borders.
-9. **Dead-Center Vertical Alignment**: All content must be centered vertically (`top: 50%`, `transform: translateY(-50%)`).
-10. **Hero Subject Persistence**: Persisting subjects glide to dead-center stage instead of abruptly cutting to black.
-11. **Permanent Text Visibility**: Highlighters sweep behind permanent high-contrast text.
-12. **Absolute Media Relevance**: Never use generic stock footage (wind turbines, random drone shots) as filler.
-13. **The Premiere Pro Subtitle Crop**: Crop out lower-third subtitles by scaling `115%–138%` and shifting `translateY(-35px)`.
-14. **The Authentic Sourcing Law (No Synthetic SVGs for Real Subjects)**:
-    - Never generate synthetic SVG line drawings for real-world architectural landmarks (e.g. Eiffel Tower, Brandenburg Gate), physical venues, or real hardware products.
-    - Always search the web and extract authentic, high-resolution photographic transparent PNG cutouts. Real physical texture, metal reflection, and architectural realism are mandatory for documentary credibility.
-15. **The Deep Asset Harvest Mandate (Script-Proportional Scope)**:
-    - For long-form teardowns, comparisons, and product reviews, NEVER settle for a superficial 3–4 images. The depth of asset harvesting must match the script's narrative scope: systematically collect heroes, exploded internals, rear I/O, accessories, lifestyle installations, competitor benchmarks, predecessor hardware, and editorial launch event photos into `product_images/<brand>/`.
-
----
-
-## 10. Acoustic Foley Sound Design (`public/sfx/`)
+## 9. Acoustic Foley Sound Design (`public/sfx/`)
 
 Every visual entrance or state transition **MUST** have a synchronized Foley hit:
 `swoosh.wav`, `click.wav`, `pop.wav`, `thud.wav`, `stamp_slam.wav`, `draw.wav`, `camera_click.wav`.
 
 ---
 
-## 11. Windows PowerShell Execution Rule
+## 10. Execution Frameworks & Windows PowerShell Rule
 
 Always run Remotion commands via `cmd /c`:
 ```powershell

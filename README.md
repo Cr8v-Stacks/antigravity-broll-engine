@@ -18,6 +18,14 @@ B-Roll is the comprehensive umbrella discipline for all visual storytelling foot
 
 ---
 
+## ⚡ The Material-First Asset Intelligence (Zero Synthetic Drawings)
+
+- **Mandatory Pre-Flight Asset Sourcing**: The engine proactively evaluates whether to use **Mixed-Media Cutouts (Path A)**, **Live Video Footage (Path B)**, or **Pure Swiss Typography (Path C)**.
+- **Strict Anti-Synthetic Drawing Law**: If an entity exists in the real physical world (landmarks like Eiffel Tower, hardware products like Bluetti/EcoFlow, components like solar panels, the sun, inverters, batteries, tools), the AI is **strictly forbidden from drawing them using SVG code or CSS shapes**. It fetches authentic, high-resolution photographic cutouts or videos online beforehand.
+- **Living Spec Choreography Mindsets**: Specs are spatial choreography patterns (e.g. *Spec 1: Hero Arrival & Stage Split*, *Spec 3: Versus Showdown*, *Spec 7: Sequential Comma Push*). When the user says *"I trust your creative eye"*, the engine **never discards the specs**—it selects and applies the best spec choreography mindset.
+
+---
+
 ## ✨ Key Features
 
 - **⚡ Instant `/broll` Slash Command**: Type `/broll` in Antigravity to launch the interactive onboarding flow.
