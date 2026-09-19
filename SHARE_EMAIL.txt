@@ -1,0 +1,55 @@
+Subject: Studio B-Roll Motion Graphics Engine (Setup Guide & Links)
+
+Hi [Name],
+
+I’m sharing the standalone B-Roll Motion Graphics Engine that we built to run inside Google Antigravity (Gemini Coder), along with a video walkthrough showing how it works.
+
+--------------------------------------------------
+1. VIDEO WALKTHROUGH
+--------------------------------------------------
+Watch the walkthrough here:
+https://cr8v-stacks.neetorecord.com/watch/4e170b9852fac65f9d5f
+
+--------------------------------------------------
+2. WHAT IS GEMINI CODER (ANTIGRAVITY)?
+--------------------------------------------------
+Gemini Coder (Antigravity) is an agentic AI coding environment developed by Google DeepMind. Instead of just answering text prompts in a browser, it works directly inside your local development workspace as an active pair programmer:
+- It understands full codebase architectures, scripts, and local media.
+- It executes terminal builds, renders Remotion video compositions locally, and manages assets.
+- It operates using specialized "Skills" (like this B-roll engine) triggered with simple slash commands (e.g. /broll).
+- It guides you step-by-step through interactive click-and-choose question modals, so you never have to guess or write complex prompts.
+
+--------------------------------------------------
+3. WHAT DOES THE B-ROLL SKILL DO?
+--------------------------------------------------
+This skill transforms YouTube script sentences into broadcast-grade, high-retention editorial B-rolls (in the visual language of Vox, Johnny Harris, Bloomberg, MKBHD, and Cleo Abram):
+- 8 Modular Spec Archetypes: Hardware specs, scoreboards, split versus comparisons, live telemetry gauges, Reddit/forum receipts, statement hooks, comma lists, and forensic audits.
+- Synchronous Acoustic Foley: 11 frame-accurate sound effects (swoosh, click, pop, thud, stamp_slam) matched to visual cues.
+- Material-First Intelligence: Proactively searches for and downloads authentic transparent product cutouts and 4K footage instead of drawing cheap synthetic shapes.
+- Interactive Onboarding: Type /broll, and it interviews you with one simple click-and-choose question at a time to build your scene.
+
+--------------------------------------------------
+4. GITHUB DOWNLOAD LINKS
+--------------------------------------------------
+GitHub Repository:
+https://github.com/Cr8v-Stacks/antigravity-broll-engine
+
+Git Clone Command:
+git clone https://github.com/Cr8v-Stacks/antigravity-broll-engine.git
+
+Direct ZIP Download (No Git needed):
+https://github.com/Cr8v-Stacks/antigravity-broll-engine/archive/refs/heads/main.zip
+
+--------------------------------------------------
+5. QUICK 2-MINUTE SETUP
+--------------------------------------------------
+1. Download or clone the repository, then open the folder in Antigravity IDE (the skill in .agents/skills/broll/ is detected automatically).
+2. Open the terminal and run:
+   npm install
+3. In the Antigravity chat panel, type:
+   /broll
+
+Antigravity will guide you through creating your first clip!
+
+Best regards,
+[Your Name]
