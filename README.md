@@ -22,7 +22,7 @@ B-Roll is the comprehensive umbrella discipline for all visual storytelling foot
 
 - **⚡ Instant `/broll` Slash Command**: Type `/broll` in Antigravity to launch the interactive onboarding flow.
 - **🎯 Click-and-Choose Guided Onboarding**: Sequential 1-question-at-a-time modals (`ask_question`) guiding you through starting point, script input, asset sources, specs, and concept pitch.
-- **🧠 Mandatory Mindset Priming & Pre-Flight Quality Gate**: Prevents premature code generation and "AI slop". The engine pauses to digest your selection, verify negative constraints, and output a visible pre-flight blueprint before touching code.
+- **🧠 Mandatory Full Skill & Resource Digest Quality Gate**: Prevents premature code generation and "AI slop". The engine pauses to thoroughly digest the entire base skill, spec catalog, soundboard, and commandments before touching code, presenting a visible pre-flight blueprint.
 - **🧩 8 Modular Spec Archetypes**: Pre-built TSX components for hardware specs, scoreboards, versus comparisons, telemetry gauges, forum receipts, kinetic statement hooks, comma lists, and forensic audits.
 - **🎨 Living Blueprints (Specs as Addons)**: Specs serve as creative guides rather than rigid molds.
 - **🎧 Synchronous Acoustic Foley Library**: Includes `swoosh`, `click`, `pop`, `thud`, `stamp_slam`, `draw`, and `camera_click` sound effects synchronized to the exact frame.

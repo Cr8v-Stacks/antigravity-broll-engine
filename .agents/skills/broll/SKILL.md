@@ -196,28 +196,44 @@ Before writing any code, the agent MUST analyze the user's provided script text 
 
 ---
 
-## 6. The Mandatory Mindset Priming & Pre-Flight Blueprint (Anti-Rush Stop Gate)
+## 6. The Mandatory Skill & Resource Digest Protocol (The Anti-Rush Quality Gate)
 
-> **🚨 ABSOLUTE QUALITY LAW: NEVER JUMP DIRECTLY INTO CODE UPON RECEIVING USER INPUT.**
+> **🚨 ABSOLUTE WORKFLOW LAW: NEVER JUMP INTO WORK BEFORE DIGESTING THE ENTIRE SKILL SET & RESOURCES.**
 > 
-> In conversational workflows, the model's working memory often narrows around the user's latest message, causing it to rush straight into coding without re-absorbing the design rules, negative constraints, and audio math. This produces "AI slop" and amateur outputs ("rubbish").
+> When a user provides their response, script text, or concept selection, the AI must **NEVER jump straight into generating code or working with just the raw feedback.**
+> Working on a production project requires that the creator/agent **thoroughly go through all available resources and digest the entire base skill set before diving in.**
 >
 > **THE MANDATORY RULE**:
-> The agent is **STRICTLY PROHIBITED** from writing `.tsx` files, creating compositions, or executing render commands immediately after the user selects a concept or provides feedback.
+> The agent is **STRICTLY FORBIDDEN** from writing `.tsx` files, creating compositions, or executing render commands immediately upon receiving user feedback.
 >
-> Instead, the agent **MUST** pause, digest the user's response, reload the negative constraints from `references/anti-ai-slop.md`, and output a visible **`🧠 Mindset Priming & Pre-Flight Blueprint Digest`** directly in the chat.
+> Instead, the agent **MUST** explicitly pause, go back into the base skill, and **re-read and digest the entire skill set and all its accompanying reference resources**:
+> 1. **The Entire Base Skill (`SKILL.md`)**: Re-absorb the macro architecture, all 5 production tracks, the mixability vs. isolation laws, the living blueprint philosophy, deliverable naming laws, and execution commands.
+> 2. **The Complete Design Spec Catalog (`references/spec-catalog.md`)**: Review the visual progression, structural layouts, and component mechanics of the relevant specs.
+> 3. **The Foley Soundboard (`references/foley-soundboard.md`)**: Review all 11 acoustic sound assets in `public/sfx/`, decibel gains, and frame-accurate synchronization formulas.
+> 4. **The Complete Anti-AI Slop Commandments (`references/anti-ai-slop.md`)**: Re-absorb all 15 editorial commandments, negative constraints, banned patterns, and dynamic spatial physics.
+> 5. **Available Project Assets & Media**: Inspect available local cutouts, web assets, and audio files.
+>
+> **THE VISIBLE USER CONFIRMATION**:
+> The agent **MUST let the user know explicitly** that it is going through the base skill set and all available resources to fully understand them and get itself in the exact mindset needed for the generation. It must output this visible **`🧠 Creative Director Mindset & Complete Skill Digest Blueprint`** directly into the chat:
 
-### The Required Mindset Priming Digest Format:
+### The Required Mindset & Complete Skill Digest Format:
 
 ```markdown
-### 🧠 B-Roll Director Mindset Priming & Pre-Flight Digest
+### 🧠 Creative Director Mindset & Complete Skill Digest Blueprint
 
-#### 1. Selected Style Track & Aesthetic DNA
-- **Production Track**: [Track 1: Modern Motion Tech / Track 2: Swiss Typographic / Track 3: Vox Documentary / Track 4: OEM Ingestion / Track 5: Viral Shorts]
+#### 1. Comprehensive Skill & Resource Review (Full Base Digest)
+- [x] **Base Engine (`SKILL.md`)**: Re-read and digested complete macro architecture, the 5 production tracks, mixability rules, and execution laws.
+- [x] **Spec Catalog (`references/spec-catalog.md`)**: Reviewed layout mechanics and visual progression for chosen spec addons.
+- [x] **Acoustic Foley (`references/foley-soundboard.md` & `public/sfx/`)**: Loaded sound assets, frame offsets, and acoustic mix rules.
+- [x] **Anti-AI Slop & Editorial Laws (`references/anti-ai-slop.md`)**: Re-absorbed all 15 non-negotiable commandments and negative constraints.
+- [x] **Asset & Project Context**: Audited available image cutouts, video clips, and texture layers.
+
+#### 2. Selected Production Track & Aesthetic Direction
+- **Production Track**: [Track 1: Modern Tech Motion / Track 2: Swiss Typographic / Track 3: Vox Documentary / Track 4: OEM Ingestion / Track 5: Viral Shorts]
 - **Aesthetic Tone & Philosophy**: [1–2 sentences capturing the visual language, contrast, and spatial behavior]
 - **Modular Spec Addons**: [e.g. Spec 1 (ProductSpec) + Spec 7 (SequentialEmphasis) hybrid]
 
-#### 2. Negative Constraints & Anti-AI Slop Checklist (Active Ban List)
+#### 3. Negative Constraints & Anti-AI Slop Checklist (Active Ban List)
 - [x] **Zero Eyebrow / Zero Pill Badge Law**: ABSOLUTELY NO uppercase category tags, pill boxes, or `[ HURDLE 01 ]` marketing bloat.
 - [x] **Zero Frame-0 Full Canvas Trap**: The canvas opens clean/empty; elements arrive word-by-word with the speaker's vocal cues.
 - [x] **Zero Simultaneous Card Dumps**: Elements push and displace each other dynamically using spatial physics.
@@ -225,17 +241,17 @@ Before writing any code, the agent MUST analyze the user's provided script text 
 - [x] **Zero Generic Stock Filler**: Every asset directly depicts the exact hardware or claim cited.
 - [x] **Strict Vertical Centering**: All content perfectly centered on Y-axis (`top: 50%`, `transform: translateY(-50%)`).
 
-#### 3. Audio Timing Math & Narration Cadence
+#### 4. Spoken Narration Timing Math & Cadence
 - **Spoken Voiceover Text**: "[Quote the exact spoken words being visualized]"
-- **Cadence Math**: [X] words ÷ 2.25 words/sec = ~[Y.Y] seconds = **[Z] frames @ 30fps**.
+- **Cadence Calculation**: [X] words ÷ 2.25 words/sec = ~[Y.Y] seconds = **[Z] frames @ 30fps**.
 
-#### 4. Synchronous Acoustic Foley Soundboard Map
+#### 5. Synchronous Acoustic Foley Allocation
 - **Frame [F1]**: `thud.wav` (Hero temporal / lone word slam)
 - **Frame [F2]**: `swoosh.wav` (Item 1 spatial push-left displacement)
 - **Frame [F3]**: `click.wav` (Item 2 entrance / telemetry meter power-up)
 - **Frame [F4]**: `stamp_slam.wav` (Verdict stamp / Stat slam down)
 
-#### 5. Beat-by-Beat Spatial Choreography Map
+#### 6. Beat-by-Beat Spatial Choreography Map
 | Beat / Frame Range | Spoken Vocal Cue | Visual Staging & Spatial Movement | Synchronized SFX Cue |
 | :--- | :--- | :--- | :--- |
 | Beat 1 (0–30f) | "In late 2023..." | Lone hero hook lands dead-center; screen otherwise empty | `thud.wav` (Frame 4) |
@@ -243,10 +259,10 @@ Before writing any code, the agent MUST analyze the user's provided script text 
 | Beat 3 (76–135f)| "...the integrated machine" | Dynamic telemetry meter powers up; stat slams down | `click.wav` + `stamp_slam.wav` |
 
 ---
-*Mindset confirmed & rules locked. Now compiling Remotion composition...*
+*Complete base skill set digested, resources verified, mindset primed, and constraints locked. Now proceeding to compile Remotion composition...*
 ```
 
-Only **AFTER** this visible Pre-Flight Digest is output to the chat does the agent proceed to Remotion coding and rendering!
+Only **AFTER** conducting this full review and presenting this visible digest to the user does the agent proceed to Remotion coding and rendering!
 
 ---
 
